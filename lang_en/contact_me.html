@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Anime Studio</title>
+    <meta
+      name="description"
+      content="Write to Sebastián Mendes — choose how you prefer me to reply: WhatsApp, email, or Telegram."
+    />
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Rampart+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/pages/contact_me.css" />
+
+    <script>
+      (function () {
+        var t = localStorage.getItem("animeStudioTheme") || "light";
+        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.setAttribute(
+          "data-bs-theme",
+          t === "dark" ? "dark" : "light"
+        );
+      })();
+    </script>
+  </head>
+
+  <body>
+    <!-- ══════════════════════════════════════════
+         NAVBAR
+    ══════════════════════════════════════════ -->
+    <nav class="navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../assets/img/anime-away-face-svgrepo-com.svg"
+            alt="Logo"
+            width="32"
+            height="32"
+          />
+          Anime Studio
+        </a>
+        <div class="d-none d-md-flex align-items-center gap-1 mx-auto">
+          <a class="nav-link-custom" href="home.html">Home</a>
+          <a class="nav-link-custom" href="history.html">History</a>
+          <a class="nav-link-custom" href="genres.html">Genres</a>
+          <a class="nav-link-custom" href="culture.html">Culture</a>
+          <a class="nav-link-custom active" href="contact_me.html">Contact</a>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <a
+            href="../index.html"
+            style="
+              font-size: 0.82rem;
+              color: var(--muted);
+              text-decoration: none;
+            "
+          >
+            🇪🇸 <span class="d-none d-sm-inline">ES</span>
+          </a>
+          <label class="theme-toggle" aria-label="Toggle theme">
+            <span class="icon-moon">🌙</span>
+            <input type="checkbox" class="theme-toggle-input" />
+            <span class="theme-toggle-track"></span>
+            <span class="icon-sun">☀️</span>
+          </label>
+          <button
+            class="navbar-toggler d-md-none border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+            aria-label="Abrir menú de navegación"
+            style="color: var(--text)"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+      <div
+        class="offcanvas-header"
+        style="
+          background: var(--surface);
+          border-bottom: 1px solid var(--border);
+        "
+      >
+        <h5
+          class="offcanvas-title"
+          style="font-family: var(--font-display); color: var(--primary)"
+        >
+          Menu
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body" style="background: var(--bg)">
+        <nav class="d-flex flex-column gap-2">
+          <a class="nav-link-custom" href="home.html">🏠 Home</a>
+          <a class="nav-link-custom" href="history.html">📜 History</a>
+          <a class="nav-link-custom" href="genres.html">🎭 Genres</a>
+          <a class="nav-link-custom" href="culture.html">⛩️ Culture</a>
+          <a class="nav-link-custom active" href="contact_me.html"
+            >✉️ Contact</a
+          >
+          <hr class="divider" />
+          <a class="nav-link-custom" href="../index.html">🌐 Change language</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+        HERO
+    ══════════════════════════════════════════ -->
+    <section class="page-hero">
+      <div class="container" style="position: relative; z-index: 1">
+        <nav class="breadcrumb-custom" aria-label="Breadcrumb">
+          <a href="home.html">Home</a>
+          <span class="sep">›</span>
+          <span class="current">Contact</span>
+        </nav>
+        <div class="row align-items-end">
+          <div class="col-lg-8">
+            <p class="page-hero__eyebrow">Let's talk</p>
+            <h1 class="page-hero__title">
+              Hi, I'm<br />
+              <span style="color: var(--primary)">Sebastián</span>
+            </h1>
+            <p class="page-hero__desc">
+              Have a suggestion, found a mistake, or just want to talk about
+              anime? Choose how you prefer me to reply and leave your message.
+            </p>
+          </div>
+          <div
+            class="col-lg-4 d-none d-lg-flex justify-content-end align-items-end pb-2"
+          >
+            <div
+              style="
+                font-family: var(--font-display);
+                font-size: 5rem;
+                color: var(--primary);
+                opacity: 0.18;
+                line-height: 1;
+                user-select: none;
+              "
+              aria-hidden="true"
+            >
+              連絡
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════════════════ -->
+    <main class="container my-5">
+      <div class="row g-5 align-items-start">
+        <!-- ── FORM COLUMN ── -->
+        <div class="col-lg-7">
+          <div class="contact-card">
+            <!-- Visible form -->
+            <div id="form-wrapper">
+              <h2
+                style="
+                  font-family: var(--font-display);
+                  font-size: 1.3rem;
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Send me a message
+              </h2>
+              <p
+                style="
+                  font-size: 0.85rem;
+                  color: var(--muted);
+                  margin-bottom: 2rem;
+                  line-height: 1.6;
+                "
+              >
+                Fill out the form and choose how you'd like me to contact you.
+                I'll try to respond within 24 hours.
+              </p>
+
+              <!--
+                ════════════════════════════════════════
+                FORMDATA HANDLING WITH FORMSPREE
+                ════════════════════════════════════════
+                To activate email sending:
+                1. Go to https://formspree.io and create a free account
+                2. Create a new form — you'll get an ID like "xpwzqabc"
+                3. Replace the action below:
+                   action="https://formspree.io/f/YOUR_ID_HERE"
+                4. Add method="POST" to the form
+                Free plan allows 50 submissions/month, no credit card.
+                ════════════════════════════════════════
+              -->
+              <form id="contact-form" novalidate>
+                <!-- Hidden fields for Formspree (chosen channel and handle) -->
+                <input
+                  type="hidden"
+                  name="preferred_channel"
+                  id="hidden-canal"
+                  value=""
+                />
+                <input
+                  type="hidden"
+                  name="contact_handle"
+                  id="hidden-handle"
+                  value=""
+                />
+
+                <!-- 1. Name -->
+                <div class="form-group">
+                  <label class="form-label-custom" for="field-name">
+                    Your name <span class="required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="field-name"
+                    name="name"
+                    class="form-control-custom"
+                    placeholder="What's your name?"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+
+                <!-- 2. Reply channel -->
+                <div class="form-group">
+                  <label class="form-label-custom">
+                    How would you like me to reply?
+                    <span class="required">*</span>
+                  </label>
+
+                  <div
+                    class="channel-selector"
+                    role="radiogroup"
+                    aria-label="Contact channel"
+                  >
+                    <!-- WhatsApp -->
+                    <div>
+                      <input
+                        type="radio"
+                        name="canal"
+                        id="ch-whatsapp"
+                        value="whatsapp"
+                        class="channel-input"
+                      />
+                      <label
+                        for="ch-whatsapp"
+                        class="channel-label"
+                        style="--channel-color: #25d366"
+                      >
+                        <span class="channel-check">✓</span>
+                        <span class="channel-icon">💬</span>
+                        <span class="channel-name">WhatsApp</span>
+                        <span class="channel-hint"
+                          >I'll write to the number you provide</span
+                        >
+                      </label>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                      <input
+                        type="radio"
+                        name="canal"
+                        id="ch-email"
+                        value="email"
+                        class="channel-input"
+                      />
+                      <label
+                        for="ch-email"
+                        class="channel-label"
+                        style="--channel-color: var(--primary)"
+                      >
+                        <span class="channel-check">✓</span>
+                        <span class="channel-icon">✉️</span>
+                        <span class="channel-name">Email</span>
+                        <span class="channel-hint"
+                          >I'll reply to your email address</span
+                        >
+                      </label>
+                    </div>
+
+                    <!-- Telegram -->
+                    <div>
+                      <input
+                        type="radio"
+                        name="canal"
+                        id="ch-telegram"
+                        value="telegram"
+                        class="channel-input"
+                      />
+                      <label
+                        for="ch-telegram"
+                        class="channel-label"
+                        style="--channel-color: #229ed9"
+                      >
+                        <span class="channel-check">✓</span>
+                        <span class="channel-icon">✈️</span>
+                        <span class="channel-name">Telegram</span>
+                        <span class="channel-hint"
+                          >I'll look you up by your @username</span
+                        >
+                      </label>
+                    </div>
+                  </div>
+                  <!-- /channel-selector -->
+                </div>
+
+                <!-- 3. Handle / Number / Email — appears based on channel -->
+                <div class="form-group handle-field" id="handle-whatsapp">
+                  <label class="form-label-custom" for="field-whatsapp">
+                    Your WhatsApp number <span class="required">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="field-whatsapp"
+                    name="whatsapp"
+                    class="form-control-custom"
+                    placeholder="+57 300 000 0000"
+                    autocomplete="tel"
+                  />
+                  <p
+                    style="
+                      font-size: 0.72rem;
+                      color: var(--muted);
+                      margin-top: 0.4rem;
+                    "
+                  >
+                    Include country code. E.g., +57 for Colombia.
+                  </p>
+                </div>
+
+                <div class="form-group handle-field" id="handle-email">
+                  <label class="form-label-custom" for="field-email">
+                    Your email address <span class="required">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="field-email"
+                    name="email"
+                    class="form-control-custom"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                  />
+                </div>
+
+                <div class="form-group handle-field" id="handle-telegram">
+                  <label class="form-label-custom" for="field-telegram">
+                    Your Telegram username <span class="required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="field-telegram"
+                    name="telegram"
+                    class="form-control-custom"
+                    placeholder="@your_username"
+                  />
+                  <p
+                    style="
+                      font-size: 0.72rem;
+                      color: var(--muted);
+                      margin-top: 0.4rem;
+                    "
+                  >
+                    Make sure you have a username set up in Telegram.
+                  </p>
+                </div>
+
+                <!-- 4. Message -->
+                <div class="form-group">
+                  <label class="form-label-custom" for="field-message">
+                    Message <span class="required">*</span>
+                  </label>
+                  <textarea
+                    id="field-message"
+                    name="message"
+                    class="form-control-custom"
+                    placeholder="Tell me anything — a suggestion, a correction, your favorite anime, or whatever..."
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- Global error -->
+                <div
+                  id="form-error"
+                  style="
+                    display: none;
+                    background: color-mix(in srgb, #e74c3c 10%, transparent);
+                    border: 1px solid #e74c3c;
+                    border-radius: var(--radius-md);
+                    padding: 0.8rem 1rem;
+                    font-size: 0.83rem;
+                    color: #c0392b;
+                    margin-bottom: 1.2rem;
+                  "
+                >
+                  <strong>Please fill in all required fields</strong>
+                  — include your name, choose a channel, and leave your message.
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="submit-btn" id="submit-btn">
+                  <span id="btn-text">Send message</span>
+                  <span class="btn-arrow" id="btn-arrow">→</span>
+                  <!-- Spinner (hidden by default) -->
+                  <span
+                    id="btn-spinner"
+                    style="
+                      display: none;
+                      width: 18px;
+                      height: 18px;
+                      border: 2px solid rgba(255, 255, 255, 0.4);
+                      border-top-color: #fff;
+                      border-radius: 50%;
+                      animation: spin 0.7s linear infinite;
+                    "
+                  ></span>
+                </button>
+              </form>
+              <!-- /form -->
+
+              <p
+                style="
+                  font-size: 0.72rem;
+                  color: var(--muted);
+                  text-align: center;
+                  margin-top: 1rem;
+                  line-height: 1.6;
+                "
+              >
+                Your information is only used to reply to you. It is not shared
+                with third parties.
+              </p>
+            </div>
+            <!-- /form-wrapper -->
+
+            <!-- Success panel (hidden until submission) -->
+            <div
+              class="success-panel"
+              id="success-panel"
+              role="alert"
+              aria-live="polite"
+            >
+              <div class="success-panel__icon">✅</div>
+              <h3 class="success-panel__title">Message sent!</h3>
+              <p class="success-panel__msg" id="success-msg">
+                Thank you for writing. I'll reply soon.
+              </p>
+              <p
+                class="success-panel__redirect"
+                id="success-redirect"
+                style="display: none"
+              >
+                <span>Opening</span>
+                <span id="redirect-channel">your channel</span>
+                <span
+                  style="
+                    animation: spin 0.7s linear infinite;
+                    width: 14px;
+                    height: 14px;
+                    border: 2px solid
+                      color-mix(in srgb, var(--primary) 30%, transparent);
+                    border-top-color: var(--primary);
+                    border-radius: 50%;
+                    display: inline-block;
+                  "
+                ></span>
+              </p>
+              <button
+                onclick="document.getElementById('success-panel').classList.remove('visible');document.getElementById('form-wrapper').style.display='block';document.getElementById('contact-form').reset();resetHandleFields();"
+                class="btn-outline-custom mt-2"
+                style="font-size: 0.85rem; padding: 0.6rem 1.4rem"
+              >
+                ← Send another message
+              </button>
+            </div>
+          </div>
+          <!-- /contact-card -->
+
+          <!-- Pagination -->
+          <nav class="page-nav" aria-label="Navigation between sections">
+            <a href="culture.html" class="page-nav__item">
+              <span class="page-nav__label">← Previous</span>
+              <span class="page-nav__title">Japanese Culture</span>
+            </a>
+            <a href="home.html" class="page-nav__item page-nav__item--next">
+              <span class="page-nav__label">Back to home →</span>
+              <span class="page-nav__title">Home</span>
+            </a>
+          </nav>
+        </div>
+        <!-- /col-lg-7 -->
+
+        <!-- ── SIDEBAR: INFO ── -->
+        <div class="col-lg-5">
+          <div class="author-card">
+            <!-- Generative avatar -->
+            <div class="author-avatar" aria-hidden="true">SM</div>
+
+            <h2 class="author-name">Sebastián Mendes</h2>
+            <p class="author-role">Creator of Anime Studio</p>
+            <p class="author-bio">
+              Passionate about Japanese culture, anime, and technology. Anime
+              Studio is a personal project to explore and share this universe
+              with the Spanish-speaking world.
+            </p>
+
+            <p
+              style="
+                font-family: var(--font-display);
+                font-size: 0.8rem;
+                color: var(--muted);
+                margin-bottom: 0.8rem;
+                letter-spacing: 0.5px;
+              "
+            >
+              Contact me directly
+            </p>
+
+            <!-- WhatsApp -->
+            <a
+              href="https://wa.me/573124627115?text=Hola%20Sebasti%C3%A1n%2C%20te%20escribo%20desde%20Anime%20Studio"
+              target="_blank"
+              rel="noopener"
+              class="direct-link"
+              style="--link-color: #25d366"
+              aria-label="Contact via WhatsApp"
+            >
+              <span class="direct-link__icon">💬</span>
+              <div>
+                <span class="direct-link__label">WhatsApp</span>
+                <span class="direct-link__sub">+57 312 462 7115</span>
+              </div>
+              <span class="direct-link__arrow">→</span>
+            </a>
+
+            <!-- Email -->
+            <a
+              href="mailto:tu@correo.com?subject=Contacto%20desde%20Anime%20Studio"
+              class="direct-link"
+              style="--link-color: var(--primary)"
+              aria-label="Contact via email"
+            >
+              <span class="direct-link__icon">✉️</span>
+              <div>
+                <span class="direct-link__label">Email</span>
+                <span class="direct-link__sub">tu@correo.com</span>
+              </div>
+              <span class="direct-link__arrow">→</span>
+            </a>
+
+            <!-- Telegram -->
+            <a
+              href="https://t.me/tu_usuario"
+              target="_blank"
+              rel="noopener"
+              class="direct-link"
+              style="--link-color: #229ed9"
+              aria-label="Contact via Telegram"
+            >
+              <span class="direct-link__icon">✈️</span>
+              <div>
+                <span class="direct-link__label">Telegram</span>
+                <span class="direct-link__sub">@tu_usuario</span>
+              </div>
+              <span class="direct-link__arrow">→</span>
+            </a>
+
+            <hr
+              style="
+                border: none;
+                border-top: 1px solid var(--border);
+                margin: 1.5rem 0;
+              "
+            />
+
+            <p
+              style="
+                font-size: 0.78rem;
+                color: var(--muted);
+                line-height: 1.65;
+                margin: 0;
+              "
+            >
+              Typical response time:
+              <strong style="color: var(--text)">less than 24 hours</strong>.
+              For suggestions about site content or corrections, the form is the
+              preferred channel.
+            </p>
+          </div>
+          <!-- /author-card -->
+        </div>
+      </div>
+      <!-- /row -->
+    </main>
+
+    <!-- ══════════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-md-4">
+            <span
+              style="
+                font-family: var(--font-display);
+                color: var(--primary);
+                font-size: 1.3rem;
+              "
+              >Anime Studio</span
+            >
+            <p class="mt-1 mb-0" style="font-size: 0.8rem">
+              A cultural exploration project.
+            </p>
+          </div>
+          <div class="col-md-4 text-md-center">
+            <nav class="d-flex flex-wrap gap-3 justify-content-md-center">
+              <a href="history.html">History</a>
+              <a href="genres.html">Genres</a>
+              <a href="culture.html">Culture</a>
+              <a href="contact_me.html">Contact</a>
+            </nav>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a
+              href="../index.html"
+              style="font-size: 0.8rem; color: var(--muted)"
+              >🌐 Change language</a
+            >
+          </div>
+        </div>
+        <hr class="divider mt-3" />
+        <p class="text-center mb-0" style="font-size: 0.75rem">
+          Made with ❤️ and a lot of 規律 &mdash; Anime Studio &copy; 2025
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      if (typeof bootstrap === "undefined") {
+        var s = document.createElement("script");
+        s.src = "../assets/js/bootstrap.bundle.min.js";
+        document.body.appendChild(s);
+      }
+    </script>
+    <script src="../assets/js/main.js"></script>
+
+    <style>
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- ══════════════════════════════════════════
+         FORM LOGIC
+    ══════════════════════════════════════════ -->
+    <script>
+      (function () {
+        "use strict";
+
+        /* ── Your contact information (EDIT HERE) ── */
+        var MY_WHATSAPP = "57XXXXXXXXXX"; // number without + or spaces
+        var MY_EMAIL = "tu@correo.com";
+        var MY_TELEGRAM = "tu_usuario"; // without @
+
+        /* ── DOM element references ── */
+        var radios = document.querySelectorAll('input[name="canal"]');
+        var handleFields = {
+          whatsapp: document.getElementById("handle-whatsapp"),
+          email: document.getElementById("handle-email"),
+          telegram: document.getElementById("handle-telegram"),
+        };
+        var hiddenCanal = document.getElementById("hidden-canal");
+        var hiddenHandle = document.getElementById("hidden-handle");
+        var form = document.getElementById("contact-form");
+        var formWrapper = document.getElementById("form-wrapper");
+        var successPanel = document.getElementById("success-panel");
+        var successMsg = document.getElementById("success-msg");
+        var successRedirect = document.getElementById("success-redirect");
+        var redirectChannel = document.getElementById("redirect-channel");
+        var submitBtn = document.getElementById("submit-btn");
+        var btnText = document.getElementById("btn-text");
+        var btnArrow = document.getElementById("btn-arrow");
+        var btnSpinner = document.getElementById("btn-spinner");
+        var formError = document.getElementById("form-error");
+
+        /* ── Show/hide handle field according to channel ── */
+        function showHandle(canal) {
+          Object.keys(handleFields).forEach(function (key) {
+            handleFields[key].classList.remove("visible");
+            /* remove required from all */
+            var input = handleFields[key].querySelector("input");
+            if (input) input.removeAttribute("required");
+          });
+          if (canal && handleFields[canal]) {
+            handleFields[canal].classList.add("visible");
+            var activeInput = handleFields[canal].querySelector("input");
+            if (activeInput) activeInput.setAttribute("required", "");
+          }
+          hiddenCanal.value = canal || "";
+        }
+
+        radios.forEach(function (radio) {
+          radio.addEventListener("change", function () {
+            showHandle(this.value);
+            formError.style.display = "none";
+          });
+        });
+
+        /* ── Global reset function (used by "another message" button) ── */
+        window.resetHandleFields = function () {
+          showHandle("");
+        };
+
+        /* ── Build redirect URL based on channel ── */
+        function buildRedirectURL(canal, handle, nombre, mensaje) {
+          var text =
+            "Hi Sebastián, I'm writing from Anime Studio.\n\nName: " +
+            nombre +
+            "\n\nMessage: " +
+            mensaje;
+          if (canal === "whatsapp") {
+            return (
+              "https://wa.me/" +
+              MY_WHATSAPP +
+              "?text=" +
+              encodeURIComponent(text)
+            );
+          }
+          if (canal === "telegram") {
+            /* Opens chat with Sebastián, user sends message manually */
+            return "https://t.me/" + MY_TELEGRAM;
+          }
+          if (canal === "email") {
+            return (
+              "mailto:" +
+              MY_EMAIL +
+              "?subject=" +
+              encodeURIComponent("Contact from Anime Studio — " + nombre) +
+              "&body=" +
+              encodeURIComponent(text)
+            );
+          }
+          return null;
+        }
+
+        /* ── Submit ── */
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          var nombre = document.getElementById("field-name").value.trim();
+          var canal = hiddenCanal.value;
+          var mensaje = document.getElementById("field-message").value.trim();
+
+          /* Get handle from active field */
+          var handle = "";
+          if (canal === "whatsapp")
+            handle = document.getElementById("field-whatsapp").value.trim();
+          if (canal === "email")
+            handle = document.getElementById("field-email").value.trim();
+          if (canal === "telegram")
+            handle = document.getElementById("field-telegram").value.trim();
+
+          hiddenHandle.value = handle;
+
+          /* Basic validation */
+          if (!nombre || !canal || !handle || !mensaje) {
+            formError.style.display = "block";
+            formError.scrollIntoView({ behavior: "smooth", block: "center" });
+            return;
+          }
+          formError.style.display = "none";
+
+          /* Show spinner */
+          btnText.textContent = "Sending…";
+          btnArrow.style.display = "none";
+          btnSpinner.style.display = "inline-block";
+          submitBtn.disabled = true;
+
+          /*
+           * ════════════════════════════════════════
+           * FORMSPREE INTEGRATION
+           * Replace FORMSPREE_ID with your actual ID.
+           * Steps: go to formspree.io → New Form → copy the ID
+           * that appears in the URL, e.g., "xpwzqabc"
+           * ════════════════════════════════════════
+           */
+          var FORMSPREE_ID = "TU_ID_AQUI"; // ← only change needed
+
+          /* Sync hidden fields before sending */
+          hiddenCanal.value = canal;
+          hiddenHandle.value = handle;
+
+          var formData = new FormData(form);
+
+          fetch("https://formspree.io/f/" + FORMSPREE_ID, {
+            method: "POST",
+            headers: { Accept: "application/json" },
+            body: formData,
+          })
+            .then(function (response) {
+              if (!response.ok) {
+                /* Formspree returns errors in JSON */
+                return response.json().then(function (data) {
+                  throw new Error(
+                    data.error || "Error sending (" + response.status + ")"
+                  );
+                });
+              }
+              return response.json();
+            })
+            .then(function () {
+              /* ── SUCCESS: show panel and redirect to channel ── */
+              var url = buildRedirectURL(canal, handle, nombre, mensaje);
+              var channelNames = {
+                whatsapp: "WhatsApp",
+                email: "your email",
+                telegram: "Telegram",
+              };
+
+              formWrapper.style.display = "none";
+              successPanel.classList.add("visible");
+              successMsg.textContent =
+                "Thank you, " +
+                nombre +
+                ". Message received! In a moment I'll open " +
+                (channelNames[canal] || canal) +
+                " with the text ready.";
+
+              if (url) {
+                successRedirect.style.display = "flex";
+                redirectChannel.textContent = channelNames[canal] || canal;
+                setTimeout(function () {
+                  window.open(url, "_blank", "noopener");
+                }, 1800);
+              }
+            })
+            .catch(function (err) {
+              /* ── ERROR: show inline message ── */
+              formError.innerHTML =
+                "<strong>Could not send the message.</strong> " +
+                err.message +
+                " — Please try again or contact me directly.";
+              formError.style.display = "block";
+              formError.scrollIntoView({ behavior: "smooth", block: "center" });
+            })
+            .finally(function () {
+              btnText.textContent = "Send message";
+              btnArrow.style.display = "inline";
+              btnSpinner.style.display = "none";
+              submitBtn.disabled = false;
+            });
+        });
+      })();
+    </script>
+
+    <!-- Floating petals -->
+    <script>
+      (function () {
+        for (var i = 0; i < 6; i++) {
+          var p = document.createElement("div");
+          p.className = "petal";
+          p.style.left = Math.random() * 100 + "vw";
+          p.style.animationDuration = 9 + Math.random() * 10 + "s";
+          p.style.animationDelay = Math.random() * 15 + "s";
+          p.style.width = p.style.height = 8 + Math.random() * 9 + "px";
+          document.body.appendChild(p);
+        }
+      })();
+    </script>
+  </body>
+</html>

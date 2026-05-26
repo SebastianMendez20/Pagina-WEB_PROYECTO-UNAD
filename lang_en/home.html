@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home — Anime Studio</title>
+    <meta
+      name="description"
+      content="Discover the history, genres, culture, and art of Japanese anime."
+    />
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Rampart+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- Aplicar tema antes del renderizado (evita FOUC) -->
+    <script>
+      (function () {
+        var t = localStorage.getItem("animeStudioTheme") || "light";
+        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.setAttribute(
+          "data-bs-theme",
+          t === "dark" ? "dark" : "light"
+        );
+      })();
+    </script>
+  </head>
+
+  <body>
+    <!-- ══════════════════════════════════════════
+         NAVBAR
+    ══════════════════════════════════════════ -->
+    <nav class="navbar sticky-top">
+      <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../assets/img/anime-away-face-svgrepo-com.svg"
+            alt="Anime Studio Logo"
+            width="32"
+            height="32"
+          />
+          Anime Studio
+        </a>
+
+        <!-- Nav links (desktop) -->
+        <div class="d-none d-md-flex align-items-center gap-1 mx-auto">
+          <a class="nav-link-custom active" href="home.html">Home</a>
+          <a class="nav-link-custom" href="history.html">History</a>
+          <a class="nav-link-custom" href="genres.html">Genres</a>
+          <a class="nav-link-custom" href="culture.html">Culture</a>
+          <a class="nav-link-custom" href="contact_me.html">Contact</a>
+        </div>
+
+        <!-- Controles derecha -->
+        <div class="d-flex align-items-center gap-3">
+          <!-- Idioma -->
+          <a
+            href="../index.html"
+            class="d-flex align-items-center gap-1"
+            style="
+              font-size: 0.82rem;
+              color: var(--muted);
+              text-decoration: none;
+            "
+            title="Change language"
+          >
+            🇪🇸 <span class="d-none d-sm-inline">ES</span>
+          </a>
+
+          <!-- Theme toggle -->
+          <label class="theme-toggle" aria-label="Toggle theme">
+            <span class="icon-moon">🌙</span>
+            <input type="checkbox" class="theme-toggle-input" />
+            <span class="theme-toggle-track"></span>
+            <span class="icon-sun">☀️</span>
+          </label>
+
+          <!-- Hamburger mobile -->
+          <button
+            class="navbar-toggler d-md-none border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+            aria-label="Abrir menú de navegación"
+            style="color: var(--text)"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Menú móvil (Offcanvas) -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+      <div
+        class="offcanvas-header"
+        style="
+          background: var(--surface);
+          border-bottom: 1px solid var(--border);
+        "
+      >
+        <h5
+          class="offcanvas-title"
+          style="font-family: var(--font-display); color: var(--primary)"
+        >
+          Menu
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body" style="background: var(--bg)">
+        <nav class="d-flex flex-column gap-2">
+          <a class="nav-link-custom active" href="home.html">🏠 Home</a>
+          <a class="nav-link-custom" href="history.html">📜 History</a>
+          <a class="nav-link-custom" href="genres.html">🎭 Genres</a>
+          <a class="nav-link-custom" href="culture.html">⛩️ Culture</a>
+          <a class="nav-link-custom" href="contact_me.html">✉️ Contact</a>
+          <hr class="divider" />
+          <a class="nav-link-custom" href="../index.html">🌐 Change language</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════ -->
+    <main>
+      <section class="home-hero">
+        <div class="home-hero__bg"></div>
+        <div class="home-hero__circle home-hero__circle--1"></div>
+        <div class="home-hero__circle home-hero__circle--2"></div>
+  
+        <div class="container home-hero__content">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-6">
+              <span class="home-hero__tag">日本 × アニメ</span>
+              <h1 class="home-hero__title">
+                Discover the<br />
+                universe of<br />
+                <span>Anime</span>
+              </h1>
+              <p class="home-hero__desc">
+                A journey through Japanese culture, its history, its genres and
+                the global impact of one of the most exciting art forms of the
+                modern world.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="history.html" class="btn-primary-custom">
+                  Start exploring →
+                </a>
+                <a href="genres.html" class="btn-outline-custom"> View genres </a>
+              </div>
+            </div>
+  
+            <div class="col-lg-6 d-none d-lg-flex justify-content-center">
+              <!-- Ilustración SVG inline decorativa -->
+              <svg
+                viewBox="0 0 420 420"
+                width="380"
+                height="380"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <!-- Círculo base -->
+                <circle
+                  cx="210"
+                  cy="210"
+                  r="190"
+                  fill="none"
+                  stroke="var(--primary)"
+                  stroke-width="1.5"
+                  stroke-dasharray="8 6"
+                  opacity=".3"
+                />
+                <!-- Sol naciente estilizado -->
+                <circle
+                  cx="210"
+                  cy="210"
+                  r="80"
+                  fill="none"
+                  stroke="var(--primary)"
+                  stroke-width="2"
+                  opacity=".6"
+                />
+                <circle
+                  cx="210"
+                  cy="210"
+                  r="50"
+                  fill="var(--primary)"
+                  opacity=".15"
+                />
+                <!-- Rayos -->
+                <g stroke="var(--primary)" stroke-width="2" opacity=".4">
+                  <line x1="210" y1="100" x2="210" y2="70" />
+                  <line x1="210" y1="320" x2="210" y2="350" />
+                  <line x1="100" y1="210" x2="70" y2="210" />
+                  <line x1="320" y1="210" x2="350" y2="210" />
+                  <line x1="140" y1="140" x2="119" y2="119" />
+                  <line x1="280" y1="140" x2="301" y2="119" />
+                  <line x1="140" y1="280" x2="119" y2="301" />
+                  <line x1="280" y1="280" x2="301" y2="301" />
+                </g>
+                <!-- Texto japonés central -->
+                <text
+                  x="210"
+                  y="222"
+                  font-family="'Rampart One', cursive"
+                  font-size="42"
+                  text-anchor="middle"
+                  fill="var(--primary)"
+                  opacity=".9"
+                >
+                  anime
+                </text>
+                <!-- Kanji decorativos alrededor -->
+                <text
+                  x="210"
+                  y="168"
+                  font-family="serif"
+                  font-size="14"
+                  text-anchor="middle"
+                  fill="var(--muted)"
+                  opacity=".6"
+                >
+                  アニメ
+                </text>
+                <text
+                  x="210"
+                  y="262"
+                  font-family="serif"
+                  font-size="12"
+                  text-anchor="middle"
+                  fill="var(--muted)"
+                  opacity=".5"
+                >
+                  日本文化
+                </text>
+                <!-- Detalles flotantes -->
+                <circle
+                  cx="130"
+                  cy="120"
+                  r="6"
+                  fill="var(--accent)"
+                  opacity=".7"
+                />
+                <circle
+                  cx="310"
+                  cy="300"
+                  r="8"
+                  fill="var(--primary)"
+                  opacity=".4"
+                />
+                <circle
+                  cx="90"
+                  cy="270"
+                  r="4"
+                  fill="var(--accent)"
+                  opacity=".5"
+                />
+                <circle
+                  cx="340"
+                  cy="140"
+                  r="5"
+                  fill="var(--primary)"
+                  opacity=".5"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- row -->
+  
+          <!-- Stats -->
+          <div
+            class="row mt-5 pt-3 border-top"
+            style="border-color: var(--border) !important"
+          >
+            <div class="col-6 col-md-3 mb-3">
+              <div class="stat-item">
+                <span class="stat-num">+100</span>
+                <span class="stat-label">Active studios</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <div class="stat-item">
+                <span class="stat-num">+7000</span>
+                <span class="stat-label">Series produced</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <div class="stat-item">
+                <span class="stat-num">50+</span>
+                <span class="stat-label">Genres and subgenres</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <div class="stat-item">
+                <span class="stat-num">$25B</span>
+                <span class="stat-label">Global industry (USD)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- ══════════════════════════════════════════
+           SECCIÓN: QUÉ EXPLORAR
+      ══════════════════════════════════════════ -->
+      <section class="py-5 mt-2">
+        <div class="container">
+          <div class="text-center mb-5">
+            <p class="section-label">Site content</p>
+            <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem)">
+              What will you explore?
+            </h2>
+            <p
+              style="
+                color: var(--muted);
+                max-width: 520px;
+                margin: 0 auto;
+                font-size: 0.95rem;
+                line-height: 1.8;
+              "
+            >
+              From the origins of Japanese animation to the modern genres
+              conquering screens worldwide.
+            </p>
+          </div>
+  
+          <div class="row gy-4">
+            <div class="col-sm-6 col-lg-3">
+              <a
+                href="history.html"
+                class="topic-card d-block text-decoration-none"
+              >
+                <span class="topic-card__icon">📜</span>
+                <h3 class="topic-card__title">History</h3>
+                <p class="topic-card__desc">
+                  From the first animations of 1917 to the explosive digital
+                  growth of the 21st century.
+                </p>
+                <span class="topic-card__link">Read more <span>→</span></span>
+              </a>
+            </div>
+  
+            <div class="col-sm-6 col-lg-3">
+              <a
+                href="genres.html"
+                class="topic-card d-block text-decoration-none"
+              >
+                <span class="topic-card__icon">🎭</span>
+                <h3 class="topic-card__title">Genres</h3>
+                <p class="topic-card__desc">
+                  Shōnen, Shōjo, Isekai, Mecha, Slice of Life... a universe of
+                  narratives for every type of viewer.
+                </p>
+                <span class="topic-card__link">Explore <span>→</span></span>
+              </a>
+            </div>
+  
+            <div class="col-sm-6 col-lg-3">
+              <a
+                href="culture.html"
+                class="topic-card d-block text-decoration-none"
+              >
+                <span class="topic-card__icon">⛩️</span>
+                <h3 class="topic-card__title">Culture</h3>
+                <p class="topic-card__desc">
+                  How anime reflects the philosophy, traditions, and identity of
+                  the Japanese people.
+                </p>
+                <span class="topic-card__link">Discover <span>→</span></span>
+              </a>
+            </div>
+  
+            <div class="col-sm-6 col-lg-3">
+              <a
+                href="contact_me.html"
+                class="topic-card d-block text-decoration-none"
+              >
+                <span class="topic-card__icon">✉️</span>
+                <h3 class="topic-card__title">Contact</h3>
+                <p class="topic-card__desc">
+                  Do you have suggestions, corrections, or just want to talk about
+                  anime? Write me.
+                </p>
+                <span class="topic-card__link">Contact <span>→</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- ══════════════════════════════════════════
+           SECCIÓN: CITA / BANNER DESTACADO
+      ══════════════════════════════════════════ -->
+      <section class="py-5">
+        <div class="container">
+          <div class="feature-banner">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <p class="section-label mb-2">Philosophy</p>
+                <p class="feature-banner__quote">
+                  "Anime is not just entertainment —<br />
+                  it is a mirror of the human condition."
+                </p>
+                <p
+                  style="
+                    color: var(--muted);
+                    font-size: 0.9rem;
+                    line-height: 1.7;
+                    max-width: 480px;
+                  "
+                >
+                  Through its stories, anime explores universal themes: the
+                  passage of time, loss, friendship, growth. That is what makes it
+                  a genuine art with millions of followers worldwide.
+                </p>
+                <a
+                  href="culture.html"
+                  class="btn-primary-custom mt-3 d-inline-flex"
+                >
+                  Explore culture →
+                </a>
+              </div>
+              <div class="col-md-4 text-center mt-4 mt-md-0">
+                <!-- Visual decorativo -->
+                <div style="font-size: 5rem; opacity: 0.8; line-height: 1">
+                  ⛩️
+                </div>
+                <p
+                  style="
+                    font-family: var(--font-display);
+                    font-size: 1.1rem;
+                    color: var(--primary);
+                    margin-top: 0.5rem;
+                  "
+                >
+                  日本の魂
+                </p>
+                <p style="font-size: 0.75rem; color: var(--muted)">
+                  The soul of Japan
+                </p>
+              </div>
+            </div>
+            <div class="feature-banner__deco" aria-hidden="true">魂</div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- ══════════════════════════════════════════
+           SECCIÓN: LÍNEA DE TIEMPO BREVE
+      ══════════════════════════════════════════ -->
+      <section class="py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <p class="section-label">Timeline</p>
+              <h2 style="font-size: clamp(1.6rem, 3.5vw, 2.4rem)">
+                A century of<br />Japanese animation
+              </h2>
+              <p
+                style="
+                  color: var(--muted);
+                  font-size: 0.95rem;
+                  line-height: 1.8;
+                  margin-top: 1rem;
+                "
+              >
+                More than a hundred years of artistic and narrative evolution that
+                transformed an animation technique into one of the most
+                influential cultural phenomena on the planet.
+              </p>
+              <a
+                href="history.html"
+                class="btn-outline-custom mt-3 d-inline-flex"
+              >
+                Full history →
+              </a>
+            </div>
+  
+            <div class="col-lg-6 offset-lg-1">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <p class="timeline-item__year">1917</p>
+                  <h4 class="timeline-item__title">The first steps</h4>
+                  <p class="timeline-item__desc">
+                    Seitaro Kitayama and Junichi Kouchi create the first
+                    documented Japanese animations, inspired by Western
+                    techniques.
+                  </p>
+                </div>
+  
+                <div class="timeline-item">
+                  <p class="timeline-item__year">1963</p>
+                  <h4 class="timeline-item__title">
+                    Astro Boy — the television era
+                  </h4>
+                  <p class="timeline-item__desc">
+                    Osamu Tezuka brings anime to television with Astro Boy,
+                    defining the visual and narrative style that would last for
+                    decades.
+                  </p>
+                </div>
+  
+                <div class="timeline-item">
+                  <p class="timeline-item__year">1984 – 1997</p>
+                  <h4 class="timeline-item__title">
+                    The golden age — Miyazaki & Gainax
+                  </h4>
+                  <p class="timeline-item__desc">
+                    Studio Ghibli and Gainax redefine the limits of anime with
+                    works like Nausicaä, Akira, Neon Genesis Evangelion and
+                    Princess Mononoke.
+                  </p>
+                </div>
+  
+                <div class="timeline-item">
+                  <p class="timeline-item__year">2010s</p>
+                  <h4 class="timeline-item__title">
+                    Global expansion and streaming
+                  </h4>
+                  <p class="timeline-item__desc">
+                    Crunchyroll, Netflix and Amazon bring anime to the whole
+                    world. Titles like Attack on Titan and Demon Slayer break
+                    global records.
+                  </p>
+                </div>
+  
+                <div class="timeline-item">
+                  <p class="timeline-item__year">Today</p>
+                  <h4 class="timeline-item__title">A $25 billion industry</h4>
+                  <p class="timeline-item__desc">
+                    Anime is the third most viewed content on streaming worldwide,
+                    with active fandoms in more than 190 countries.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- ══════════════════════════════════════════
+           SECCIÓN: GÉNEROS DESTACADOS (chips)
+      ══════════════════════════════════════════ -->
+      <section
+        class="py-5"
+        style="
+          background: var(--surface);
+          border-top: 1px solid var(--border);
+          border-bottom: 1px solid var(--border);
+        "
+      >
+        <div class="container text-center">
+          <p class="section-label">Popular genres</p>
+          <h2 class="mb-4">Find your favorite genre</h2>
+  
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <!-- Badges / chips de géneros -->
+            <a href="genres.html" class="text-decoration-none">
+              <span
+                class="badge rounded-pill px-3 py-2"
+                style="
+                  background: color-mix(in srgb, var(--primary) 15%, transparent);
+                  color: var(--primary);
+                  border: 1px solid var(--primary);
+                  font-family: var(--font-body);
+                  font-size: 0.88rem;
+                "
+              >
+                ⚔️ Shōnen
+              </span>
+            </a>
+            <a href="genres.html" class="text-decoration-none">
+              <span
+                class="badge rounded-pill px-3 py-2"
+                style="
+                  background: color-mix(in srgb, var(--accent) 20%, transparent);
+                  color: var(--text);
+                  border: 1px solid var(--border);
+                  font-family: var(--font-body);
+                  font-size: 0.88rem;
+                "
+              >
+                🌸 Shōjo
+              </span>
+            </a>
+            <a href="genres.html" class="text-decoration-none">
+              <span
+                class="badge rounded-pill px-3 py-2"
+                style="
+                  background: color-mix(in srgb, var(--primary) 15%, transparent);
+                  color: var(--primary);
+                  border: 1px solid var(--primary);
+                  font-family: var(--font-body);
+                  font-size: 0.88rem;
+                "
+              >
+                🌀 Isekai
+              </span>
+            </a>
+            <a href="genres.html" class="text-decoration-none">
+              <span
+                class="badge rounded-pill px-3 py-2"
+                style="
+                  background: color-mix(in srgb, var(--accent) 20%, transparent);
+                  color: var(--text);
+                  border: 1px solid var(--border);
+                  font-family: var(--font-body);
+                  font-size: 0.88rem;
+                "
+              >
+                🤖 Mecha
+              </span>
+            </a>
+            <a href="genres.html" class="text-decoration-none">
+              <span
+                class="badge rounded-pill px-3 py-2"
+                style="
+                  background: color-mix(in srgb, var(--primary) 15%, transparent);
+                  color: var(--primary);
+                  border: 1px solid var(--primary);
+                  font-family: var(--font-body);
+                  font-size: 0.88rem;
+                "
+              >
+                🔪 Seinen
+              </span>
+            </a>
+            <a href="genres.html" class="text-decoration-none">
+              <span
+                class="badge rounded-pill px-3 py-2"
+                style="
+                  background: color-mix(in srgb, var(--accent) 20%, transparent);
+                  color: var(--text);
+                  border: 1px solid var(--border);
+                  font-family: var(--font-body);
+                  font-size: 0.88rem;
+                "
+              >
+                ☕ Slice of Life
+              </span>
+            </a>
+            <a href="genres.html" class="text-decoration-none">
+              <span
+                class="badge rounded-pill px-3 py-2"
+                style="
+                  background: color-mix(in srgb, var(--primary) 15%, transparent);
+                  color: var(--primary);
+                  border: 1px solid var(--primary);
+                  font-family: var(--font-body);
+                  font-size: 0.88rem;
+                "
+              >
+                👻 Supernatural
+              </span>
+            </a>
+            <a href="genres.html" class="text-decoration-none">
+              <span
+                class="badge rounded-pill px-3 py-2"
+                style="
+                  background: color-mix(in srgb, var(--accent) 20%, transparent);
+                  color: var(--text);
+                  border: 1px solid var(--border);
+                  font-family: var(--font-body);
+                  font-size: 0.88rem;
+                "
+              >
+                😂 Comedy
+              </span>
+            </a>
+            <a href="genres.html" class="text-decoration-none">
+              <span
+                class="badge rounded-pill px-3 py-2"
+                style="
+                  background: color-mix(in srgb, var(--primary) 15%, transparent);
+                  color: var(--primary);
+                  border: 1px solid var(--primary);
+                  font-family: var(--font-body);
+                  font-size: 0.88rem;
+                "
+              >
+                🏆 Sports
+              </span>
+            </a>
+            <a href="genres.html" class="text-decoration-none">
+              <span
+                class="badge rounded-pill px-3 py-2"
+                style="
+                  background: color-mix(in srgb, var(--accent) 20%, transparent);
+                  color: var(--text);
+                  border: 1px solid var(--border);
+                  font-family: var(--font-body);
+                  font-size: 0.88rem;
+                "
+              >
+                🧠 Psychological
+              </span>
+            </a>
+          </div>
+  
+          <a href="genres.html" class="btn-primary-custom mt-4 d-inline-flex">
+            View all genres →
+          </a>
+        </div>
+      </section>
+  
+      <!-- ══════════════════════════════════════════
+           CTA FINAL
+      ══════════════════════════════════════════ -->
+      <section class="py-5">
+        <div class="container text-center">
+          <div style="max-width: 560px; margin: 0 auto">
+            <div style="font-size: 3.5rem; margin-bottom: 1rem">🎌</div>
+            <h2 style="font-size: clamp(1.6rem, 3.5vw, 2.4rem)">
+              Your adventure begins here
+            </h2>
+            <p
+              style="
+                color: var(--muted);
+                font-size: 0.95rem;
+                line-height: 1.8;
+                margin: 1rem 0 2rem;
+              "
+            >
+              Whether you're an anime veteran or someone just discovering this
+              world, Anime Studio has content for you.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a href="history.html" class="btn-primary-custom"
+                >📜 Anime history</a
+              >
+              <a href="culture.html" class="btn-outline-custom"
+                >⛩️ Japanese culture</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══════════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-md-4">
+            <span
+              style="
+                font-family: var(--font-display);
+                color: var(--primary);
+                font-size: 1.3rem;
+              "
+            >
+              Anime Studio
+            </span>
+            <p class="mt-1 mb-0" style="font-size: 0.8rem">
+              A cultural exploration project.
+            </p>
+          </div>
+          <div class="col-md-4 text-md-center">
+            <nav class="d-flex flex-wrap gap-3 justify-content-md-center">
+              <a href="history.html">History</a>
+              <a href="genres.html">Genres</a>
+              <a href="culture.html">Culture</a>
+              <a href="contact_me.html">Contact</a>
+            </nav>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a
+              href="../index.html"
+              style="font-size: 0.8rem; color: var(--muted)"
+            >
+              🌐 Change language
+            </a>
+          </div>
+        </div>
+        <hr class="divider mt-3" />
+        <p class="text-center mb-0" style="font-size: 0.75rem">
+          Made with ❤️ and a lot of 規律 &mdash; Anime Studio &copy; 2026
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Fallback JS local -->
+    <script>
+      if (typeof bootstrap === "undefined") {
+        var s = document.createElement("script");
+        s.src = "../assets/js/bootstrap.bundle.min.js";
+        document.body.appendChild(s);
+      }
+    </script>
+
+    <!-- JS propio -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Pétalos flotantes -->
+    <script>
+      (function () {
+        for (var i = 0; i < 8; i++) {
+          var p = document.createElement("div");
+          p.className = "petal";
+          p.style.left = Math.random() * 100 + "vw";
+          p.style.animationDuration = 9 + Math.random() * 10 + "s";
+          p.style.animationDelay = Math.random() * 15 + "s";
+          p.style.width = p.style.height = 8 + Math.random() * 9 + "px";
+          document.body.appendChild(p);
+        }
+      })();
+    </script>
+  </body>
+</html>

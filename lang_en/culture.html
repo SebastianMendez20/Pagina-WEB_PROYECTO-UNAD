@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Japanese Culture — Anime Studio</title>
+    <meta
+      name="description"
+      content="Explore Japanese culture: philosophy, Shinto, Buddhism, festivals, gastronomy, and how anime projects it to the world."
+    />
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Rampart+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/pages/culture.css" />
+
+    <!-- Correction for oversized images -->
+    <style>
+      .culture-img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    </style>
+
+    <script>
+      (function () {
+        var t = localStorage.getItem("animeStudioTheme") || "light";
+        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.setAttribute(
+          "data-bs-theme",
+          t === "dark" ? "dark" : "light"
+        );
+      })();
+    </script>
+  </head>
+
+  <body>
+    <!-- ══════════════════════════════════════════
+         NAVBAR
+    ══════════════════════════════════════════ -->
+    <nav class="navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../assets/img/anime-away-face-svgrepo-com.svg"
+            alt="Logo"
+            width="32"
+            height="32"
+          />
+          Anime Studio
+        </a>
+        <div class="d-none d-md-flex align-items-center gap-1 mx-auto">
+          <a class="nav-link-custom" href="home.html">Home</a>
+          <a class="nav-link-custom" href="history.html">History</a>
+          <a class="nav-link-custom" href="genres.html">Genres</a>
+          <a class="nav-link-custom active" href="culture.html">Culture</a>
+          <a class="nav-link-custom" href="contact_me.html">Contact</a>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <a
+            href="../index.html"
+            style="
+              font-size: 0.82rem;
+              color: var(--muted);
+              text-decoration: none;
+            "
+          >
+            🇪🇸 <span class="d-none d-sm-inline">ES</span>
+          </a>
+          <label class="theme-toggle" aria-label="Toggle theme">
+            <span class="icon-moon">🌙</span>
+            <input type="checkbox" class="theme-toggle-input" />
+            <span class="theme-toggle-track"></span>
+            <span class="icon-sun">☀️</span>
+          </label>
+          <button
+            class="navbar-toggler d-md-none border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+            aria-label="Abrir menú de navegación"
+            style="color: var(--text)"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+      <div
+        class="offcanvas-header"
+        style="
+          background: var(--surface);
+          border-bottom: 1px solid var(--border);
+        "
+      >
+        <h5
+          class="offcanvas-title"
+          style="font-family: var(--font-display); color: var(--primary)"
+        >
+          Menu
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body" style="background: var(--bg)">
+        <nav class="d-flex flex-column gap-2">
+          <a class="nav-link-custom" href="home.html">🏠 Home</a>
+          <a class="nav-link-custom" href="history.html">📜 History</a>
+          <a class="nav-link-custom" href="genres.html">🎭 Genres</a>
+          <a class="nav-link-custom active" href="culture.html">⛩️ Culture</a>
+          <a class="nav-link-custom" href="contact_me.html">✉️ Contact</a>
+          <hr class="divider" />
+          <a class="nav-link-custom" href="../index.html">🌐 Change language</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════ -->
+    <section class="page-hero">
+      <div class="container" style="position: relative; z-index: 1">
+        <nav class="breadcrumb-custom" aria-label="Breadcrumb">
+          <a href="home.html">Home</a>
+          <span class="sep">›</span>
+          <span class="current">Culture</span>
+        </nav>
+        <div class="row align-items-end">
+          <div class="col-lg-8">
+            <p class="page-hero__eyebrow">Identity · Philosophy · Tradition</p>
+            <h1 class="page-hero__title">
+              Japanese<br />
+              <span style="color: var(--primary)">culture</span>
+            </h1>
+            <p class="page-hero__desc">
+              More than two thousand years of history, religious syncretism,
+              unique life philosophies, and an aesthetic that has conquered the
+              world. Japan does not export only entertainment — it exports a
+              different way of seeing existence.
+            </p>
+          </div>
+          <div
+            class="col-lg-4 d-none d-lg-flex justify-content-end align-items-end pb-2"
+          >
+            <div
+              style="
+                font-family: var(--font-display);
+                font-size: 5rem;
+                color: var(--primary);
+                opacity: 0.18;
+                line-height: 1;
+                user-select: none;
+              "
+              aria-hidden="true"
+            >
+              文化
+            </div>
+          </div>
+        </div>
+
+        <!-- Section navigation -->
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <a
+            href="#filosofia"
+            style="
+              font-size: 0.8rem;
+              padding: 0.35rem 0.9rem;
+              border-radius: 999px;
+              border: 1.5px solid var(--border);
+              color: var(--muted);
+              text-decoration: none;
+              transition: all var(--transition);
+            "
+            onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)';"
+            onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)';"
+          >
+            🧘 Philosophy
+          </a>
+          <a
+            href="#religion"
+            style="
+              font-size: 0.8rem;
+              padding: 0.35rem 0.9rem;
+              border-radius: 999px;
+              border: 1.5px solid var(--border);
+              color: var(--muted);
+              text-decoration: none;
+              transition: all var(--transition);
+            "
+            onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)';"
+            onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)';"
+          >
+            ⛩️ Religion
+          </a>
+          <a
+            href="#festivales"
+            style="
+              font-size: 0.8rem;
+              padding: 0.35rem 0.9rem;
+              border-radius: 999px;
+              border: 1.5px solid var(--border);
+              color: var(--muted);
+              text-decoration: none;
+              transition: all var(--transition);
+            "
+            onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)';"
+            onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)';"
+          >
+            🎆 Festivals
+          </a>
+          <a
+            href="#gastronomia"
+            style="
+              font-size: 0.8rem;
+              padding: 0.35rem 0.9rem;
+              border-radius: 999px;
+              border: 1.5px solid var(--border);
+              color: var(--muted);
+              text-decoration: none;
+              transition: all var(--transition);
+            "
+            onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)';"
+            onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)';"
+          >
+            🍜 Gastronomy
+          </a>
+          <a
+            href="#anime-puente"
+            style="
+              font-size: 0.8rem;
+              padding: 0.35rem 0.9rem;
+              border-radius: 999px;
+              border: 1.5px solid var(--border);
+              color: var(--muted);
+              text-decoration: none;
+              transition: all var(--transition);
+            "
+            onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)';"
+            onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)';"
+          >
+            🌐 Anime as bridge
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <!-- ══════════════════════════════════════════
+           SECTION 1: JAPANESE PHILOSOPHY
+      ══════════════════════════════════════════ -->
+      <section class="culture-section" id="filosofia">
+        <div class="container">
+          <div class="row gy-5 align-items-start">
+            <!-- Intro text -->
+            <div class="col-lg-5">
+              <p class="section-eyebrow">Japanese thought</p>
+              <h2 class="section-title">Philosophies that guide life</h2>
+              <p class="section-body">
+                Japanese culture has its own philosophical vocabulary — words
+                without exact translation — that define ways of feeling, living,
+                and relating to the world that do not exist in other languages.
+                They are not abstract concepts: they are everyday practices that
+                shape society, art, and ultimately anime.<a
+                  class="ref-mark"
+                  href="#referencias"
+                  >[1]</a
+                >
+              </p>
+              <p class="section-body mt-3">
+                Many of these concepts have their origin in Zen Buddhism and
+                Shintoism, but have evolved to become part of the Japanese
+                collective unconscious, permeating everything from architecture
+                to the way of serving a cup of tea.
+              </p>
+
+              <!-- Ikigai SVG diagram -->
+              <div class="ikigai-wrapper mt-4">
+                <svg
+                  class="ikigai-svg"
+                  viewBox="0 0 340 340"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Ikigai diagram: intersection of passion, mission, vocation and profession"
+                  role="img"
+                >
+                  <defs>
+                    <style>
+                      .ik-label {
+                        font-family: "Rampart One", serif;
+                        font-size: 11px;
+                      }
+                      .ik-sub {
+                        font-family: serif;
+                        font-size: 9px;
+                      }
+                      .ik-center {
+                        font-family: "Rampart One", serif;
+                        font-size: 13px;
+                        font-weight: bold;
+                      }
+                    </style>
+                  </defs>
+                  <!-- Semi‑transparent circles -->
+                  <circle
+                    class="ikigai-circle"
+                    cx="155"
+                    cy="140"
+                    r="90"
+                    fill="var(--primary)"
+                    opacity=".22"
+                  />
+                  <circle
+                    class="ikigai-circle"
+                    cx="185"
+                    cy="140"
+                    r="90"
+                    fill="var(--accent)"
+                    opacity=".22"
+                  />
+                  <circle
+                    class="ikigai-circle"
+                    cx="155"
+                    cy="200"
+                    r="90"
+                    fill="var(--primary)"
+                    opacity=".18"
+                  />
+                  <circle
+                    class="ikigai-circle"
+                    cx="185"
+                    cy="200"
+                    r="90"
+                    fill="var(--accent)"
+                    opacity=".18"
+                  />
+                  <!-- Quadrant labels -->
+                  <text
+                    x="112"
+                    y="100"
+                    text-anchor="middle"
+                    class="ik-label"
+                    fill="var(--text)"
+                  >
+                    What you
+                  </text>
+                  <text
+                    x="112"
+                    y="113"
+                    text-anchor="middle"
+                    class="ik-label"
+                    fill="var(--primary)"
+                  >
+                    love
+                  </text>
+                  <text
+                    x="230"
+                    y="100"
+                    text-anchor="middle"
+                    class="ik-label"
+                    fill="var(--text)"
+                  >
+                    What the
+                  </text>
+                  <text
+                    x="230"
+                    y="113"
+                    text-anchor="middle"
+                    class="ik-label"
+                    fill="var(--primary)"
+                  >
+                    world needs
+                  </text>
+                  <text
+                    x="112"
+                    y="248"
+                    text-anchor="middle"
+                    class="ik-label"
+                    fill="var(--text)"
+                  >
+                    What you are
+                  </text>
+                  <text
+                    x="112"
+                    y="261"
+                    text-anchor="middle"
+                    class="ik-label"
+                    fill="var(--primary)"
+                  >
+                    good at
+                  </text>
+                  <text
+                    x="230"
+                    y="248"
+                    text-anchor="middle"
+                    class="ik-label"
+                    fill="var(--text)"
+                  >
+                    What you can
+                  </text>
+                  <text
+                    x="230"
+                    y="261"
+                    text-anchor="middle"
+                    class="ik-label"
+                    fill="var(--primary)"
+                  >
+                    be paid for
+                  </text>
+                  <!-- Intermediate intersections -->
+                  <text
+                    x="170"
+                    y="133"
+                    text-anchor="middle"
+                    class="ik-sub"
+                    fill="var(--muted)"
+                  >
+                    Passion
+                  </text>
+                  <text
+                    x="170"
+                    y="228"
+                    text-anchor="middle"
+                    class="ik-sub"
+                    fill="var(--muted)"
+                  >
+                    Vocation
+                  </text>
+                  <text
+                    x="126"
+                    y="175"
+                    text-anchor="middle"
+                    class="ik-sub"
+                    fill="var(--muted)"
+                  >
+                    Mission
+                  </text>
+                  <text
+                    x="214"
+                    y="175"
+                    text-anchor="middle"
+                    class="ik-sub"
+                    fill="var(--muted)"
+                  >
+                    Profession
+                  </text>
+                  <!-- Center: IKIGAI -->
+                  <circle
+                    cx="170"
+                    cy="175"
+                    r="28"
+                    fill="var(--primary)"
+                    opacity=".85"
+                  />
+                  <text
+                    x="170"
+                    y="171"
+                    text-anchor="middle"
+                    class="ik-center"
+                    fill="white"
+                  >
+                    Ikigai
+                  </text>
+                  <text
+                    x="170"
+                    y="184"
+                    text-anchor="middle"
+                    fill="white"
+                    font-size="8"
+                    font-family="serif"
+                  >
+                    生き甲斐
+                  </text>
+                </svg>
+              </div>
+              <p
+                style="
+                  font-size: 0.75rem;
+                  color: var(--muted);
+                  text-align: center;
+                  margin-top: 0.5rem;
+                "
+              >
+                Ikigai places at the centre each person's reason for being.<a
+                  class="ref-mark"
+                  href="#referencias"
+                  >[2]</a
+                >
+              </p>
+            </div>
+
+            <!-- Philosophical concepts -->
+            <div class="col-lg-7">
+              <div class="d-flex flex-column gap-3">
+                <div class="concept-pill">
+                  <span class="concept-pill__kanji">侘寂</span>
+                  <div>
+                    <h3 class="concept-pill__name">Wabi-Sabi</h3>
+                    <span class="concept-pill__romaji">wabi-sabi</span>
+                    <p class="concept-pill__desc">
+                      Finding beauty in imperfection, incompleteness, and
+                      impermanence. A broken bowl repaired with gold is more
+                      beautiful than an intact one — its scars tell its story.
+                      The aesthetic of wabi‑sabi permeates architecture, Zen
+                      gardens, and Japanese visual arts.<a
+                        class="ref-mark"
+                        href="#referencias"
+                        >[3]</a
+                      >
+                    </p>
+                    <p class="concept-pill__anime">
+                      In anime: the melancholy of Ghibli landscapes, the
+                      imperfect characters who grow without ever being fully
+                      resolved.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="concept-pill">
+                  <span class="concept-pill__kanji">物哀</span>
+                  <div>
+                    <h3 class="concept-pill__name">Mono no Aware</h3>
+                    <span class="concept-pill__romaji"
+                      >mono no aware — "the empathy towards things"</span
+                    >
+                    <p class="concept-pill__desc">
+                      The bittersweet awareness that everything is ephemeral.
+                      Coined in the Heian period and later taken up by scholar
+                      Motoori Norinaga in the 18th century. Appreciating a
+                      cherry blossom knowing it will fall in a few days is the
+                      purest experience of mono no aware.<a
+                        class="ref-mark"
+                        href="#referencias"
+                        >[4]</a
+                      >
+                    </p>
+                    <p class="concept-pill__anime">
+                      In anime: the end of Clannad, the flashbacks in Violet
+                      Evergarden, the Hanami in the first episode of Fruits
+                      Basket.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="concept-pill">
+                  <span class="concept-pill__kanji">改善</span>
+                  <div>
+                    <h3 class="concept-pill__name">Kaizen</h3>
+                    <span class="concept-pill__romaji"
+                      >kaizen — "continuous improvement"</span
+                    >
+                    <p class="concept-pill__desc">
+                      The philosophy of constant small improvements. Not great
+                      revolutions but daily micro‑changes that, accumulated,
+                      produce extraordinary transformations. Toyota, Sony, and
+                      Walt Disney Company are global examples of its
+                      application.<a class="ref-mark" href="#referencias"
+                        >[5]</a
+                      >
+                    </p>
+                    <p class="concept-pill__anime">
+                      In anime: the training of Goku, Rock Lee, or Izuku
+                      Midoriya — overcoming is never a leap, always a process.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="concept-pill">
+                  <span class="concept-pill__kanji">我慢</span>
+                  <div>
+                    <h3 class="concept-pill__name">Gaman</h3>
+                    <span class="concept-pill__romaji"
+                      >gaman — "to endure with dignity"</span
+                    >
+                    <p class="concept-pill__desc">
+                      The ability to bear the unbearable with patience and
+                      without outward complaint. Linked to Zen Buddhism, gaman
+                      is Japanese stoicism: not denying pain, but going through
+                      it silently without losing composure.<a
+                        class="ref-mark"
+                        href="#referencias"
+                        >[1]</a
+                      >
+                    </p>
+                    <p class="concept-pill__anime">
+                      In anime: Spike Spiegel in Cowboy Bebop, Itachi Uchiha in
+                      Naruto, the characters of Vinland Saga facing tragedy.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="concept-pill">
+                  <span class="concept-pill__kanji">金繕</span>
+                  <div>
+                    <h3 class="concept-pill__name">Kintsukuroi</h3>
+                    <span class="concept-pill__romaji"
+                      >kintsukuroi — "to repair with gold"</span
+                    >
+                    <p class="concept-pill__desc">
+                      The art of repairing broken ceramics with gold, silver, or
+                      platinum lacquer. The repaired piece does not hide its
+                      fractures — it celebrates them. A powerful metaphor:
+                      breaks are part of an object's (or a person's) history and
+                      make it more valuable.<a
+                        class="ref-mark"
+                        href="#referencias"
+                        >[1]</a
+                      >
+                    </p>
+                    <p class="concept-pill__anime">
+                      In anime: characters who grow through trauma without
+                      erasing it — Nana Osaki, Rei Kiriyama, Ken Kaneki.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 2: RELIGION
+      ══════════════════════════════════════════ -->
+      <section class="culture-section culture-section--alt" id="religion">
+        <div class="container">
+          <div class="row gy-5 align-items-start">
+            <div class="col-lg-5">
+              <!-- Main image: Torii -->
+              <div
+                class="img-ph--tall"
+                style="overflow: hidden; border-radius: var(--radius-md)"
+              >
+                <img
+                  src="../assets/img/culture_pages/Torii.webp"
+                  alt="Floating torii at Itsukushima Shrine, Hiroshima"
+                  class="culture-img"
+                />
+              </div>
+              <p
+                style="
+                  font-size: 0.73rem;
+                  color: var(--muted);
+                  text-align: center;
+                  margin-top: 0.5rem;
+                "
+              >
+                <em>Torii</em> (鳥居) mark the threshold between the profane and
+                the sacred.
+              </p>
+            </div>
+
+            <div class="col-lg-7">
+              <p class="section-eyebrow">Worldview</p>
+              <h2 class="section-title">
+                Faith without forced choice: religious syncretism
+              </h2>
+              <p class="section-body">
+                Japan has a unique relationship with religion. Most Japanese
+                people do not declare themselves devotees of any particular
+                faith, and yet religion is present on every corner of their
+                daily lives. This phenomenon is called
+                <strong>syncretism</strong>: the harmonious coexistence of
+                multiple belief systems without contradiction.<a
+                  class="ref-mark"
+                  href="#referencias"
+                  >[6]</a
+                >
+              </p>
+              <p class="section-body mt-2">
+                It is common for the same family to celebrate New Year at a
+                Shinto shrine, marry in a Shinto or Christian ceremony, and bury
+                their dead with Buddhist rites — without perceiving any
+                inconsistency.
+              </p>
+
+              <!-- Religion tabs -->
+              <div class="religion-tab-btns mt-4" role="tablist">
+                <button
+                  class="religion-tab-btn active"
+                  data-tab="shinto"
+                  role="tab"
+                >
+                  ⛩️ Shinto
+                </button>
+                <button class="religion-tab-btn" data-tab="budismo" role="tab">
+                  🪷 Zen Buddhism
+                </button>
+                <button class="religion-tab-btn" data-tab="yokai" role="tab">
+                  👹 Folklore & Yōkai
+                </button>
+              </div>
+
+              <div
+                id="tab-shinto"
+                class="religion-tab-panel active"
+                role="tabpanel"
+              >
+                <p class="section-body">
+                  <strong>Shinto</strong> (神道, "way of the gods") is Japan's
+                  native religion, the only one that existed before the arrival
+                  of Buddhism. It is polytheistic: it venerates <em>kami</em>,
+                  spirits that inhabit every natural element — mountains, trees,
+                  rivers, wind. Its pillars are ritual purification, reverence
+                  for nature, family, and seasonal festivals.<a
+                    class="ref-mark"
+                    href="#referencias"
+                    >[6]</a
+                  >
+                </p>
+                <p class="section-body mt-2">
+                  <em>Jinja</em> (神社, Shinto shrines) are the sacred spaces
+                  where kami receive veneration. Japan has more than 80,000
+                  registered shrines — more than convenience stores
+                  (<em>konbini</em>). The iconic <em>torii</em> arch always
+                  marks the entrance to the sacred space.
+                </p>
+                <div
+                  class="mt-3"
+                  style="
+                    overflow: hidden;
+                    border-radius: var(--radius-md);
+                    height: 180px;
+                  "
+                >
+                  <img
+                    src="../assets/img/culture_pages/Ceremonia en un jinja.jpg"
+                    alt="Ceremony at a jinja (Shinto shrine) with priest and attendees"
+                    class="culture-img"
+                  />
+                </div>
+              </div>
+
+              <div id="tab-budismo" class="religion-tab-panel" role="tabpanel">
+                <p class="section-body">
+                  Buddhism arrived in Japan from Korea in the 6th century and
+                  merged with Shinto so deeply that both are sometimes
+                  considered a single faith. The current that has had the
+                  greatest impact on Japanese culture is
+                  <strong>Zen Buddhism</strong> (禅), which prioritises direct
+                  meditation over the study of texts.<a
+                    class="ref-mark"
+                    href="#referencias"
+                    >[6]</a
+                  >
+                </p>
+                <p class="section-body mt-2">
+                  Zen directly influenced Japanese arts: the tea ceremony
+                  (<em>chanoyu</em>), calligraphy, gravel gardens
+                  (<em>karesansui</em>), Noh theatre, and minimalist
+                  architecture. The idea of finding the infinite in the small —
+                  a cup, a brushstroke, a stone — is profoundly Zen.
+                </p>
+                <div
+                  class="mt-3"
+                  style="
+                    overflow: hidden;
+                    border-radius: var(--radius-md);
+                    height: 180px;
+                  "
+                >
+                  <img
+                    src="../assets/img/culture_pages/Jardín del templo Ryōan-ji.webp"
+                    alt="Zen garden of Ryōan-ji in Kyoto, UNESCO World Heritage"
+                    class="culture-img"
+                  />
+                </div>
+              </div>
+
+              <div id="tab-yokai" class="religion-tab-panel" role="tabpanel">
+                <p class="section-body">
+                  Japanese folklore is a universe of its own: thousands of
+                  supernatural creatures called <strong>yōkai</strong> (妖怪)
+                  populate Japanese mythology. They are not simply monsters —
+                  they are beings with complex personalities, sometimes
+                  benevolent, sometimes mischievous, sometimes terrifying. Each
+                  region of Japan has its particular yōkai.<a
+                    class="ref-mark"
+                    href="#referencias"
+                    >[7]</a
+                  >
+                </p>
+                <p class="section-body mt-2">
+                  Nature <em>kami</em>, wandering spirits called <em>yūrei</em>,
+                  magical foxes (<em>kitsune</em>), mischievous raccoons
+                  (<em>tanuki</em>), and mountain <em>tengu</em> are just some
+                  of the entities that populate the Japanese imagination — and
+                  appear in hundreds of anime, from
+                  <em>Natsume's Book of Friends</em> to
+                  <em>Jujutsu Kaisen</em> or <em>Spirited Away</em>.
+                </p>
+                <div
+                  class="mt-3"
+                  style="
+                    overflow: hidden;
+                    border-radius: var(--radius-md);
+                    height: 180px;
+                  "
+                >
+                  <img
+                    src="../assets/img/culture_pages/estampa ukiyo-e de yōkai de Utagawa Kuniyoshi.jpg"
+                    alt="Ukiyo‑e print of yōkai by Utagawa Kuniyoshi"
+                    class="culture-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 3: FESTIVALS
+      ══════════════════════════════════════════ -->
+      <section class="culture-section" id="festivales">
+        <div class="container">
+          <div class="text-center mb-5">
+            <p class="section-eyebrow" style="justify-content: center">
+              Matsuri 祭り
+            </p>
+            <h2 class="section-title">The calendar of celebrations</h2>
+            <p class="section-body mx-auto" style="max-width: 560px">
+              <em>Matsuri</em> are not just festivals — they are the pulse of
+              the community. Each season has its own celebrations, each linked
+              to nature, spirituality, and local identity.<a
+                class="ref-mark"
+                href="#referencias"
+                >[8]</a
+              >
+            </p>
+          </div>
+
+          <!-- Automatic Carousel: Celebrations Calendar -->
+          <div
+            id="carouselSeasons"
+            class="carousel slide culture-carousel"
+            data-bs-ride="carousel"
+            data-bs-interval="7000"
+          >
+            <div class="carousel-inner">
+              <!-- SPRING -->
+              <div class="carousel-item active">
+                <div class="season-card">
+                  <div
+                    class="season-card__header"
+                    style="
+                      background: color-mix(
+                        in srgb,
+                        #ffb7c5 18%,
+                        var(--surface)
+                      );
+                    "
+                  >
+                    <span class="season-card__icon">🌸</span>
+                    <div>
+                      <h3 class="season-card__season">Spring</h3>
+                      <span class="season-card__jp">春 — Haru</span>
+                    </div>
+                  </div>
+                  <div class="season-card__img">
+                    <img
+                      src="../assets/img/culture_pages/Parque Ueno.webp"
+                      alt="Hanami at Ueno Park, Tokyo"
+                      class="culture-img"
+                    />
+                  </div>
+                  <div class="season-card__body">
+                    <div class="season-card__event">
+                      <span
+                        class="season-badge"
+                        style="
+                          background: color-mix(
+                            in srgb,
+                            #ffb7c5 25%,
+                            transparent
+                          );
+                          color: #c0392b;
+                        "
+                        >🌸 Mar–Apr</span
+                      >
+                      <div>
+                        <p class="season-card__event-name">Hanami 花見</p>
+                        <p class="season-card__event-desc">
+                          Cherry blossom viewing. Families and friends gather
+                          under the sakura trees for picnics and to reflect on
+                          the fleeting nature of life — the quintessence of mono
+                          no aware.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="season-card__event">
+                      <span
+                        class="season-badge"
+                        style="
+                          background: color-mix(
+                            in srgb,
+                            #f39c12 20%,
+                            transparent
+                          );
+                          color: #e67e22;
+                        "
+                        >🎏 May</span
+                      >
+                      <div>
+                        <p class="season-card__event-name">
+                          Kodomo no Hi 子供の日
+                        </p>
+                        <p class="season-card__event-desc">
+                          Children's Day. Cloth carp streamers
+                          (<em>koinobori</em>) are hung to symbolize
+                          perseverance, strength, and success for the family's
+                          youth.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SUMMER -->
+              <div class="carousel-item">
+                <div class="season-card">
+                  <div
+                    class="season-card__header"
+                    style="
+                      background: color-mix(
+                        in srgb,
+                        #f39c12 15%,
+                        var(--surface)
+                      );
+                    "
+                  >
+                    <span class="season-card__icon">🎆</span>
+                    <div>
+                      <h3 class="season-card__season">Summer</h3>
+                      <span class="season-card__jp">夏 — Natsu</span>
+                    </div>
+                  </div>
+                  <div class="season-card__img">
+                    <img
+                      src="../assets/img/culture_pages/Tanabata.jpg"
+                      alt="Tanabata — colorful paper strips (tanzaku) hanging on bamboo"
+                      class="culture-img"
+                    />
+                  </div>
+                  <div class="season-card__body">
+                    <div class="season-card__event">
+                      <span
+                        class="season-badge"
+                        style="
+                          background: color-mix(
+                            in srgb,
+                            #3498db 20%,
+                            transparent
+                          );
+                          color: #2980b9;
+                        "
+                        >⭐ Jul 7</span
+                      >
+                      <div>
+                        <p class="season-card__event-name">Tanabata 七夕</p>
+                        <p class="season-card__event-desc">
+                          Star Festival. Inspired by the legend of Orihime and
+                          Hikoboshi, two lovers separated by the Milky Way who
+                          meet once a year. Wishes are written on paper strips
+                          and hung on bamboo.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="season-card__event">
+                      <span
+                        class="season-badge"
+                        style="
+                          background: color-mix(
+                            in srgb,
+                            #e74c3c 20%,
+                            transparent
+                          );
+                          color: #c0392b;
+                        "
+                        >🏮 Aug</span
+                      >
+                      <div>
+                        <p class="season-card__event-name">Obon お盆</p>
+                        <p class="season-card__event-desc">
+                          Festival to honor the spirits of ancestors. Families
+                          return to their hometowns, lanterns are lit on rivers,
+                          and the <em>bon odori</em> dance is performed in the
+                          streets.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- AUTUMN -->
+              <div class="carousel-item">
+                <div class="season-card">
+                  <div
+                    class="season-card__header"
+                    style="
+                      background: color-mix(
+                        in srgb,
+                        #e74c3c 12%,
+                        var(--surface)
+                      );
+                    "
+                  >
+                    <span class="season-card__icon">🍂</span>
+                    <div>
+                      <h3 class="season-card__season">Autumn</h3>
+                      <span class="season-card__jp">秋 — Aki</span>
+                    </div>
+                  </div>
+                  <div class="season-card__img">
+                    <img
+                      src="../assets/img/culture_pages/Momiji-gari.webp"
+                      alt="Momiji-gari — autumn foliage viewing in Kyoto"
+                      class="culture-img"
+                    />
+                  </div>
+                  <div class="season-card__body">
+                    <div class="season-card__event">
+                      <span
+                        class="season-badge"
+                        style="
+                          background: color-mix(
+                            in srgb,
+                            #e74c3c 20%,
+                            transparent
+                          );
+                          color: #c0392b;
+                        "
+                        >🍁 Oct–Nov</span
+                      >
+                      <div>
+                        <p class="season-card__event-name">
+                          Momiji-gari 紅葉狩り
+                        </p>
+                        <p class="season-card__event-desc">
+                          The autumn version of Hanami: viewing the red and gold
+                          foliage of maple trees. In Japan, appreciating the
+                          change of seasons is a cultural practice, not just a
+                          tourist activity.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="season-card__event">
+                      <span
+                        class="season-badge"
+                        style="
+                          background: color-mix(
+                            in srgb,
+                            #9b59b6 20%,
+                            transparent
+                          );
+                          color: #8e44ad;
+                        "
+                        >👘 Nov</span
+                      >
+                      <div>
+                        <p class="season-card__event-name">
+                          Shichi-Go-San 七五三
+                        </p>
+                        <p class="season-card__event-desc">
+                          A rite of passage for children aged 3, 5, and 7 who
+                          visit Shinto shrines dressed in kimono. It celebrates
+                          their growth and asks for divine protection.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- WINTER -->
+              <div class="carousel-item">
+                <div class="season-card">
+                  <div
+                    class="season-card__header"
+                    style="
+                      background: color-mix(
+                        in srgb,
+                        #3498db 12%,
+                        var(--surface)
+                      );
+                    "
+                  >
+                    <span class="season-card__icon">❄️</span>
+                    <div>
+                      <h3 class="season-card__season">Winter</h3>
+                      <span class="season-card__jp">冬 — Fuyu</span>
+                    </div>
+                  </div>
+                  <div class="season-card__img">
+                    <img
+                      src="../assets/img/culture_pages/Shōgatsu.jpg"
+                      alt="Shōgatsu — visiting a shrine during New Year"
+                      class="culture-img"
+                    />
+                  </div>
+                  <div class="season-card__body">
+                    <div class="season-card__event">
+                      <span
+                        class="season-badge"
+                        style="
+                          background: color-mix(
+                            in srgb,
+                            #3498db 20%,
+                            transparent
+                          );
+                          color: #2980b9;
+                        "
+                        >🎍 Jan 1</span
+                      >
+                      <div>
+                        <p class="season-card__event-name">Shōgatsu お正月</p>
+                        <p class="season-card__event-desc">
+                          Japanese New Year is the most important celebration on
+                          the calendar. Families perform <em>hatsumōde</em> (the
+                          first shrine visit), eat <em>osechi ryōri</em>, and
+                          send <em>nengajō</em> cards.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="season-card__event">
+                      <span
+                        class="season-badge"
+                        style="
+                          background: color-mix(
+                            in srgb,
+                            #e74c3c 20%,
+                            transparent
+                          );
+                          color: #c0392b;
+                        "
+                        >👹 Feb</span
+                      >
+                      <div>
+                        <p class="season-card__event-name">Setsubun 節分</p>
+                        <p class="season-card__event-desc">
+                          The last day of winter according to the lunar
+                          calendar. Soybeans are thrown to drive away demons
+                          (<em>oni</em>) and bring good luck into the home.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselSeasons"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselSeasons"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+
+            <!-- Indicators (visible season) -->
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselSeasons"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Spring"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselSeasons"
+                data-bs-slide-to="1"
+                aria-label="Summer"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselSeasons"
+                data-bs-slide-to="2"
+                aria-label="Autumn"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselSeasons"
+                data-bs-slide-to="3"
+                aria-label="Winter"
+              ></button>
+            </div>
+          </div>
+          <!-- /season-grid -->
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 4: GASTRONOMY
+      ══════════════════════════════════════════ -->
+      <section class="culture-section culture-section--alt" id="gastronomia">
+        <div class="container">
+          <div class="row align-items-start gy-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">Washoku 和食</p>
+              <h2 class="section-title">Gastronomy as ritual</h2>
+              <p class="section-body">
+                Japanese cuisine (<em>washoku</em>) was declared an Intangible
+                Cultural Heritage by UNESCO in 2013. It is not just food: it is
+                an aesthetic and philosophical practice where presentation,
+                seasonality of ingredients, and respect for the diner are as
+                important as flavour.<a class="ref-mark" href="#referencias"
+                  >[6]</a
+                >
+              </p>
+              <p class="section-body mt-3">
+                The ritual of <em>itadakimasu</em> (いただきます) before every
+                meal — gratitude to everyone who made the dish possible, from
+                the farmer to nature — encapsulates the Japanese philosophy of
+                gratitude and interconnectedness.
+              </p>
+              <p class="section-body mt-3">
+                Japan has more Michelin‑starred restaurants than any other
+                country in the world, and Japanese cuisine boasts over 150,000
+                restaurants outside Japan.<a
+                  class="ref-mark"
+                  href="#referencias"
+                  >[9]</a
+                >
+              </p>
+            </div>
+
+            <div class="col-lg-8">
+              <div class="food-mosaic">
+                <!-- Featured: Ramen -->
+                <div class="food-item food-item--featured">
+                  <div class="food-item__img">
+                    <img
+                      src="../assets/img/culture_pages/Ramen.jpg"
+                      alt="Tonkotsu ramen with marinated egg and chashu"
+                      class="culture-img"
+                    />
+                  </div>
+                  <div class="food-item__body">
+                    <span class="food-item__kanji">ラーメン</span>
+                    <h4 class="food-item__name">Ramen</h4>
+                    <p class="food-item__desc">
+                      Noodle soup in pork, chicken, miso, or soy broth. Each
+                      region has its variant: Tokyo shoyu, Hokkaido miso,
+                      Fukuoka tonkotsu. Featured in anime such as
+                      <em>Naruto</em> and <em>Food Wars</em>.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Sushi -->
+                <div class="food-item">
+                  <div class="food-item__img">
+                    <img
+                      src="../assets/img/culture_pages/Sushi omakase.webp"
+                      alt="Omakase sushi — assorted nigiri"
+                      class="culture-img"
+                    />
+                  </div>
+                  <div class="food-item__body">
+                    <span class="food-item__kanji">寿司</span>
+                    <h4 class="food-item__name">Sushi</h4>
+                    <p class="food-item__desc">
+                      Japan's gastronomic ambassador.
+                      <em>Omakase</em> (entrusting yourself to the chef) is its
+                      highest form: an experience of mutual respect between cook
+                      and diner.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Matcha -->
+                <div class="food-item">
+                  <div class="food-item__img">
+                    <img
+                      src="../assets/img/culture_pages/Ceremonia del té.jpg"
+                      alt="Tea ceremony (chanoyu) with matcha"
+                      class="culture-img"
+                    />
+                  </div>
+                  <div class="food-item__body">
+                    <span class="food-item__kanji">茶道</span>
+                    <h4 class="food-item__name">Chanoyu (Tea)</h4>
+                    <p class="food-item__desc">
+                      The tea ceremony is meditation in motion: every gesture
+                      has meaning. Green tea (<em>matcha</em>) is the thread
+                      linking Zen Buddhism and wabi‑sabi aesthetics.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Wagashi -->
+                <div class="food-item">
+                  <div class="food-item__img">
+                    <img
+                      src="../assets/img/culture_pages/Wagashi.png"
+                      alt="Wagashi — traditional Japanese sweets"
+                      class="culture-img"
+                    />
+                  </div>
+                  <div class="food-item__body">
+                    <span class="food-item__kanji">和菓子</span>
+                    <h4 class="food-item__name">Wagashi</h4>
+                    <p class="food-item__desc">
+                      Traditional sweets that change with the seasons.
+                      <em>Anmitsu</em>, <em>mochi</em>, and
+                      <em>nerikiri</em> are edible works of art with an
+                      ephemeral existence — pure mono no aware.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Onigiri -->
+                <div class="food-item">
+                  <div class="food-item__img">
+                    <img
+                      src="../assets/img/culture_pages/Onigiri.webp"
+                      alt="Onigiri — rice ball wrapped in nori seaweed"
+                      class="culture-img"
+                    />
+                  </div>
+                  <div class="food-item__body">
+                    <span class="food-item__kanji">おにぎり</span>
+                    <h4 class="food-item__name">Onigiri</h4>
+                    <p class="food-item__desc">
+                      The Japanese "sandwich". Rice ball with filling wrapped in
+                      seaweed. Ubiquitous in anime — an onigiri is always a
+                      symbol of care and home.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- /food-mosaic -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 5: ANIME AS A CULTURAL BRIDGE
+      ══════════════════════════════════════════ -->
+      <section class="culture-section" id="anime-puente">
+        <div class="container">
+          <div class="text-center mb-5">
+            <p class="section-eyebrow" style="justify-content: center">
+              Cool Japan 🌐
+            </p>
+            <h2 class="section-title">Anime as cultural ambassador</h2>
+            <p class="section-body mx-auto" style="max-width: 580px">
+              Anime does not only entertain — it transmits. Generations of
+              viewers around the world have learned about Hanami, bushidō,
+              Shinto, and the philosophy of effort through animated stories.
+            </p>
+          </div>
+
+          <div class="row gy-5 align-items-start">
+            <div class="col-lg-5">
+              <div class="bridge-quote">
+                <p>
+                  "Anime has played a role of cultural dissemination in its
+                  internationalisation, serving as a bridge that awakens
+                  curiosity and interest in learning more about Japan."
+                </p>
+                <cite
+                  >— Mundana Magazine, 2025<a
+                    class="ref-mark"
+                    href="#referencias"
+                    >[1]</a
+                  ></cite
+                >
+              </div>
+
+              <!-- Stat band -->
+              <div class="stat-band mt-4">
+                <p
+                  style="
+                    font-family: var(--font-display);
+                    font-size: 0.85rem;
+                    color: var(--primary);
+                    margin-bottom: 1.5rem;
+                    letter-spacing: 0.5px;
+                  "
+                >
+                  Cool Japan in numbers
+                </p>
+                <div class="d-flex flex-wrap gap-4">
+                  <div>
+                    <span class="stat-band__num">150k+</span>
+                    <p class="stat-band__label">
+                      Japanese restaurants<br />outside Japan (2019)
+                    </p>
+                  </div>
+                  <div class="stat-band__divider d-none d-sm-block"></div>
+                  <div>
+                    <span class="stat-band__num">300k</span>
+                    <p class="stat-band__label">
+                      Annual visitors<br />Japan Expo, France
+                    </p>
+                  </div>
+                  <div class="stat-band__divider d-none d-sm-block"></div>
+                  <div>
+                    <span class="stat-band__num">500M+</span>
+                    <p class="stat-band__label">
+                      Copies sold<br />of One Piece
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Japan Expo image -->
+              <div
+                class="mt-4"
+                style="
+                  overflow: hidden;
+                  border-radius: var(--radius-md);
+                  height: 180px;
+                "
+              >
+                <img
+                  src="../assets/img/culture_pages/Japan Expo.jpeg"
+                  alt="Japan Expo — Paris, France"
+                  class="culture-img"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="d-flex flex-column gap-3">
+                <div class="bridge-item">
+                  <span class="bridge-item__icon">⛩️</span>
+                  <div>
+                    <h4 class="bridge-item__title">Shinto and sacred nature</h4>
+                    <p class="bridge-item__desc">
+                      The Shinto worldview — where natural elements are imbued
+                      with divinity — reaches millions of Western viewers
+                      through anime, creating an understanding of the
+                      relationship with nature that radically differs from the
+                      Western perspective of exploitation.<a
+                        class="ref-mark"
+                        href="#referencias"
+                        >[1]</a
+                      >
+                    </p>
+                    <p class="bridge-item__example">
+                      My Neighbor Totoro, Spirited Away, Princess Mononoke —
+                      Studio Ghibli
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bridge-item">
+                  <span class="bridge-item__icon">⚔️</span>
+                  <div>
+                    <h4 class="bridge-item__title">
+                      Bushidō: the warrior's code
+                    </h4>
+                    <p class="bridge-item__desc">
+                      The values of bushidō — loyalty, honour, effort,
+                      self‑determination — permeated the ethics of millions
+                      through shōnen anime. The master‑disciple relationship and
+                      self‑improvement are deeply linked to this samurai
+                      tradition.<a class="ref-mark" href="#referencias">[1]</a>
+                    </p>
+                    <p class="bridge-item__example">
+                      Naruto, Demon Slayer, Rurouni Kenshin, Samurai Champloo
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bridge-item">
+                  <span class="bridge-item__icon">🎆</span>
+                  <div>
+                    <h4 class="bridge-item__title">
+                      Festivals as a cultural window
+                    </h4>
+                    <p class="bridge-item__desc">
+                      <em>Matsuri</em>, Golden Week, summer fireworks, Tanabata,
+                      and Obon have become recognisable worldwide thanks to
+                      anime, which integrates them organically into their
+                      stories.<a class="ref-mark" href="#referencias">[1]</a>
+                    </p>
+                    <p class="bridge-item__example">
+                      Fruits Basket, Your Name, AnoHana, Toradora
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bridge-item">
+                  <span class="bridge-item__icon">🍜</span>
+                  <div>
+                    <h4 class="bridge-item__title">
+                      Gastronomy as protagonist
+                    </h4>
+                    <p class="bridge-item__desc">
+                      Anime such as <em>Food Wars</em>,
+                      <em>Sweetness and Lightning</em>, or
+                      <em>Isekai Izakaya</em> have turned Japanese cuisine into
+                      a global object of desire, boosting interest in washoku
+                      and the tea ceremony in markets that previously knew
+                      nothing about them.
+                    </p>
+                    <p class="bridge-item__example">
+                      Food Wars, Sweetness and Lightning, Isekai Izakaya Nobu
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bridge-item">
+                  <span class="bridge-item__icon">🤝</span>
+                  <div>
+                    <h4 class="bridge-item__title">
+                      Social values: group over individual
+                    </h4>
+                    <p class="bridge-item__desc">
+                      Anime reflects <em>wa</em> (和, harmony) as a core value
+                      of Japanese society: the importance of the group,
+                      individual sacrifice for collective well‑being, and the
+                      weight of social obligations (<em>giri</em>) that shape
+                      every decision.
+                    </p>
+                    <p class="bridge-item__example">
+                      Haikyuu!, My Hero Academia, Saikano, Sword Art Online
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           MAIN CONTAINER FOR NAV + REFERENCES
+      ══════════════════════════════════════════ -->
+      <div class="container">
+        <!-- Pagination -->
+        <nav class="page-nav" aria-label="Navigation between sections">
+          <a href="genres.html" class="page-nav__item">
+            <span class="page-nav__label">← Previous</span>
+            <span class="page-nav__title">Anime Genres</span>
+          </a>
+          <a href="contact_me.html" class="page-nav__item page-nav__item--next">
+            <span class="page-nav__label">Next →</span>
+            <span class="page-nav__title">Contact</span>
+          </a>
+        </nav>
+
+        <!-- References -->
+        <aside
+          class="references-section"
+          id="referencias"
+          aria-label="Bibliographic references"
+        >
+          <h2><span style="color: var(--primary)">📚</span> References</h2>
+          <p
+            style="
+              font-size: 0.82rem;
+              color: var(--muted);
+              margin-bottom: 1.5rem;
+            "
+          >
+            Sources consulted for the content of this section.
+          </p>
+          <ol class="ref-list">
+            <li>
+              Revista Mundana.
+              <em
+                >Anime, filosofía, cultura japonesa y occidental ¿existen
+                diálogos posibles?</em
+              >
+              Enero 2025.
+              <a
+                href="https://revistamundana.ec/blog/anime-filosofia-cultura-japonesa-y-occidental-existen-dialogos-posibles/"
+                target="_blank"
+                rel="noopener"
+              >
+                revistamundana.ec/blog/anime-filosofia-cultura-japonesa
+              </a>
+            </li>
+            <li>
+              Domestika.
+              <em>¿Qué es ikigai y cómo aplicarlo en tu vida?</em> Octubre 2025.
+              <a
+                href="https://www.domestika.org/es/blog/9863-que-es-ikigai-y-como-aplicarlo-en-tu-vida"
+                target="_blank"
+                rel="noopener"
+              >
+                domestika.org/es/blog — Ikigai
+              </a>
+            </li>
+            <li>
+              Yorokobi. <em>Cultura japonesa: costumbres y tradiciones</em>.
+              Abril 2024.
+              <a
+                href="https://yorokobi.es/cultura-japonesa-costumbres-y-tradiciones/"
+                target="_blank"
+                rel="noopener"
+              >
+                yorokobi.es/cultura-japonesa-costumbres-y-tradiciones
+              </a>
+            </li>
+            <li>
+              Japón desde Japón.
+              <em
+                >Mono no aware: la empatía y tristeza japonesa hacia el
+                mundo</em
+              >. Diciembre 2023.
+              <a
+                href="https://japondesdejapon.com/2023/12/31/mono-no-aware-la-empatia-y-tristeza-japonesa-hacia-el-mundo/"
+                target="_blank"
+                rel="noopener"
+              >
+                japondesdejapon.com — Mono no aware
+              </a>
+            </li>
+            <li>
+              Fuen Carmona.
+              <em>7 Conceptos japoneses para ayudarte en tu día a día</em>.
+              Febrero 2023.
+              <a
+                href="https://fuencarmona.com/conceptos-japoneses-ayudarte-dia-a-dia/"
+                target="_blank"
+                rel="noopener"
+              >
+                fuencarmona.com/conceptos-japoneses
+              </a>
+            </li>
+            <li>
+              Wikipedia (es). <em>Cultura de Japón</em>. Wikimedia Foundation,
+              2025.
+              <a
+                href="https://es.wikipedia.org/wiki/Cultura_de_Jap%C3%B3n"
+                target="_blank"
+                rel="noopener"
+              >
+                es.wikipedia.org/wiki/Cultura_de_Japón
+              </a>
+            </li>
+            <li>
+              Wiki Culturas (Fandom).
+              <em>Cultura Japonesa — Folklore y Yōkai</em>.
+              <a
+                href="https://culturas.fandom.com/es/wiki/Cultura_Japonesa"
+                target="_blank"
+                rel="noopener"
+              >
+                culturas.fandom.com/es/wiki/Cultura_Japonesa
+              </a>
+            </li>
+            <li>
+              Boken Viajes. <em>100 curiosidades de Japón</em>.
+              <a
+                href="https://bokenviajes.com/100-curiosidades-de-japon-no-2461/"
+                target="_blank"
+                rel="noopener"
+              >
+                bokenviajes.com/100-curiosidades-de-japon
+              </a>
+            </li>
+            <li>
+              Cultures.fr.
+              <em>La influencia de la cultura japonesa en el mundo moderno</em>.
+              Junio 2025.
+              <a
+                href="https://cultures.fr/es/post/articles/la-influencia-de-la-cultura-japonesa-en-el-mundo-moderno"
+                target="_blank"
+                rel="noopener"
+              >
+                cultures.fr/es — influencia cultura japonesa
+              </a>
+            </li>
+          </ol>
+        </aside>
+      </div>
+      <!-- /container -->
+    </main>
+
+    <!-- ══════════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-md-4">
+            <span
+              style="
+                font-family: var(--font-display);
+                color: var(--primary);
+                font-size: 1.3rem;
+              "
+              >Anime Studio</span
+            >
+            <p class="mt-1 mb-0" style="font-size: 0.8rem">
+              A cultural exploration project.
+            </p>
+          </div>
+          <div class="col-md-4 text-md-center">
+            <nav class="d-flex flex-wrap gap-3 justify-content-md-center">
+              <a href="history.html">History</a>
+              <a href="genres.html">Genres</a>
+              <a href="culture.html">Culture</a>
+              <a href="contact_me.html">Contact</a>
+            </nav>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a
+              href="../index.html"
+              style="font-size: 0.8rem; color: var(--muted)"
+              >🌐 Change language</a
+            >
+          </div>
+        </div>
+        <hr class="divider mt-3" />
+        <p class="text-center mb-0" style="font-size: 0.75rem">
+          Made with ❤️ and a lot of 抹茶 &mdash; Anime Studio &copy; 2025
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      if (typeof bootstrap === "undefined") {
+        var s = document.createElement("script");
+        s.src = "../assets/js/bootstrap.bundle.min.js";
+        document.body.appendChild(s);
+      }
+    </script>
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Religion tabs logic -->
+    <script>
+      (function () {
+        var btns = document.querySelectorAll(".religion-tab-btn");
+        var panels = document.querySelectorAll(".religion-tab-panel");
+
+        btns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var target = btn.getAttribute("data-tab");
+
+            btns.forEach(function (b) {
+              b.classList.remove("active");
+            });
+            panels.forEach(function (p) {
+              p.classList.remove("active");
+            });
+
+            btn.classList.add("active");
+            var panel = document.getElementById("tab-" + target);
+            if (panel) panel.classList.add("active");
+          });
+        });
+      })();
+    </script>
+
+    <!-- Floating petals -->
+    <script>
+      (function () {
+        for (var i = 0; i < 6; i++) {
+          var p = document.createElement("div");
+          p.className = "petal";
+          p.style.left = Math.random() * 100 + "vw";
+          p.style.animationDuration = 9 + Math.random() * 10 + "s";
+          p.style.animationDelay = Math.random() * 15 + "s";
+          p.style.width = p.style.height = 8 + Math.random() * 9 + "px";
+          document.body.appendChild(p);
+        }
+      })();
+    </script>
+  </body>
+</html>

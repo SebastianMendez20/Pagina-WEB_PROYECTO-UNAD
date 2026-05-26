@@ -1,0 +1,671 @@
+/* ══════════════════════════════════
+    PAGE HERO
+══════════════════════════════════ */
+.page-hero {
+  padding: 5rem 0 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      ellipse 55% 60% at 10% 50%,
+      color-mix(in srgb, var(--primary) 12%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 50% at 90% 20%,
+      color-mix(in srgb, var(--accent) 10%, transparent),
+      transparent 70%
+    );
+  pointer-events: none;
+}
+.page-hero__eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-family: var(--font-body);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.page-hero__eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+  display: inline-block;
+}
+.page-hero__title {
+  font-size: clamp(2rem, 5.5vw, 3.8rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.page-hero__desc {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 580px;
+  line-height: 1.85;
+}
+.breadcrumb-custom {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.breadcrumb-custom a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.breadcrumb-custom a:hover {
+  color: var(--primary);
+}
+.breadcrumb-custom .sep {
+  opacity: 0.4;
+}
+.breadcrumb-custom .current {
+  color: var(--primary);
+}
+
+/* ══════════════════════════════════
+      SECTION CHROME (bloques de sección)
+  ══════════════════════════════════ */
+.culture-section {
+  padding: 5rem 0;
+  position: relative;
+}
+.culture-section--alt {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-family: var(--font-body);
+  margin-bottom: 0.75rem;
+}
+.section-eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.section-body {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+/* ══════════════════════════════════
+      IMAGEN PLACEHOLDER (página completa)
+  ══════════════════════════════════ */
+.img-ph {
+  background: color-mix(in srgb, var(--primary) 5%, var(--surface));
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  text-align: center;
+  transition: border-color var(--transition), background var(--transition);
+  width: 100%;
+}
+.img-ph:hover {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 9%, var(--surface));
+}
+.img-ph__icon {
+  font-size: 2rem;
+  opacity: 0.45;
+}
+.img-ph__title {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--text);
+  opacity: 0.7;
+  margin: 0;
+}
+.img-ph__hint {
+  font-size: 0.72rem;
+  color: var(--muted);
+  max-width: 220px;
+  line-height: 1.5;
+  margin: 0;
+}
+.img-ph--tall {
+  min-height: 300px;
+}
+.img-ph--short {
+  min-height: 180px;
+}
+.img-ph--wide {
+  min-height: 240px;
+}
+
+/* ══════════════════════════════════
+      CONCEPTOS FILOSÓFICOS — pills con hover
+  ══════════════════════════════════ */
+.concept-pill {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.6rem;
+  transition: border-color var(--transition), transform var(--transition),
+    box-shadow var(--transition);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.concept-pill::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--primary);
+  border-radius: 4px 0 0 4px;
+  transform: scaleY(0);
+  transition: transform var(--transition);
+  transform-origin: bottom;
+}
+.concept-pill:hover {
+  border-color: var(--primary);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+}
+.concept-pill:hover::before {
+  transform: scaleY(1);
+}
+
+.concept-pill__kanji {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--primary);
+  opacity: 0.7;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 48px;
+  text-align: center;
+}
+.concept-pill__name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.2;
+}
+.concept-pill__romaji {
+  font-size: 0.72rem;
+  color: var(--primary);
+  letter-spacing: 1px;
+  font-family: var(--font-body);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.concept-pill__desc {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+.concept-pill__anime {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  color: var(--primary);
+  font-family: var(--font-body);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.concept-pill__anime::before {
+  content: "▸";
+}
+
+/* ══════════════════════════════════
+      IKIGAI DIAGRAM (SVG inline)
+  ══════════════════════════════════ */
+.ikigai-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ikigai-svg {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  overflow: visible;
+}
+/* animación de los círculos */
+.ikigai-circle {
+  animation: ikigaiFloat 5s ease-in-out infinite;
+}
+.ikigai-circle:nth-child(2) {
+  animation-delay: 1.2s;
+}
+.ikigai-circle:nth-child(3) {
+  animation-delay: 2.4s;
+}
+.ikigai-circle:nth-child(4) {
+  animation-delay: 3.6s;
+}
+@keyframes ikigaiFloat {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+/* ══════════════════════════════════
+      RELIGIÓN — tabs visuales
+  ══════════════════════════════════ */
+.religion-tab-btns {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.religion-tab-btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border);
+  background: transparent;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.religion-tab-btn.active,
+.religion-tab-btn:hover {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  color: var(--primary);
+}
+.religion-tab-panel {
+  display: none;
+}
+.religion-tab-panel.active {
+  display: block;
+}
+
+/* ══════════════════════════════════
+      FESTIVALES — grid estacional
+  ══════════════════════════════════ */
+.season-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 576px) {
+  .season-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.season-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1.5px solid var(--border);
+  transition: transform var(--transition), box-shadow var(--transition),
+    border-color var(--transition);
+}
+.season-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+.season-card__header {
+  padding: 1.2rem 1.4rem 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.season-card__icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+.season-card__season {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: 0;
+}
+.season-card__jp {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-family: var(--font-body);
+}
+.season-card__img {
+  width: 100%;
+}
+.season-card__body {
+  padding: 1rem 1.4rem 1.4rem;
+  background: var(--surface);
+}
+.season-card__event {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.84rem;
+}
+.season-card__event-name {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.season-card__event-desc {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.season-badge {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════
+      GASTRONOMÍA — mosaic grid
+  ══════════════════════════════════ */
+.food-mosaic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .food-mosaic {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .food-mosaic {
+    grid-template-columns: 1fr;
+  }
+}
+
+.food-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  transition: transform var(--transition), box-shadow var(--transition),
+    border-color var(--transition);
+}
+.food-item:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--primary);
+}
+.food-item--featured {
+  grid-column: span 2;
+}
+.food-item__img {
+  width: 100%;
+}
+.food-item__body {
+  padding: 0.9rem 1rem;
+}
+.food-item__name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+  color: var(--text);
+}
+.food-item__desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+.food-item__kanji {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+/* ══════════════════════════════════
+      ANIME COMO PUENTE CULTURAL
+  ══════════════════════════════════ */
+.bridge-quote {
+  border-left: 3px solid var(--primary);
+  padding: 1.2rem 1.6rem;
+  background: color-mix(in srgb, var(--primary) 5%, transparent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 1.5rem 0;
+}
+.bridge-quote p {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+  line-height: 1.8;
+}
+.bridge-quote cite {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: normal;
+}
+
+.bridge-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  padding: 1.2rem;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.bridge-item:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+.bridge-item__icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  width: 42px;
+  text-align: center;
+  line-height: 1;
+}
+.bridge-item__title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+.bridge-item__desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+.bridge-item__example {
+  font-size: 0.75rem;
+  color: var(--primary);
+  margin-top: 0.4rem;
+  font-family: var(--font-body);
+  display: flex;
+  gap: 0.3rem;
+  align-items: baseline;
+}
+.bridge-item__example::before {
+  content: "▸";
+}
+
+/* ══════════════════════════════════
+      COOL JAPAN — stat band
+  ══════════════════════════════════ */
+.stat-band {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--primary) 20%, var(--surface)),
+    var(--surface)
+  );
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+}
+.stat-band__num {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: var(--primary);
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.stat-band__label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.stat-band__divider {
+  width: 1px;
+  background: var(--border);
+  align-self: stretch;
+  margin: 0 0.5rem;
+}
+
+/* ══════════════════════════════════
+      PAGINACIÓN
+  ══════════════════════════════════ */
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+.page-nav__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color var(--transition), transform var(--transition);
+  min-width: 160px;
+  flex: 1;
+}
+.page-nav__item:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  color: var(--text);
+}
+.page-nav__label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+.page-nav__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--primary);
+}
+.page-nav__item--next {
+  text-align: right;
+}
+
+/* ══════════════════════════════════
+      REFERENCIAS
+  ══════════════════════════════════ */
+.references-section {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.5rem;
+  margin-top: 3rem;
+}
+.references-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.ref-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: ref-counter;
+}
+.ref-list li {
+  counter-increment: ref-counter;
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.83rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.ref-list li:last-child {
+  border-bottom: none;
+}
+.ref-list li::before {
+  content: "[" counter(ref-counter) "]";
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--primary);
+  flex-shrink: 0;
+  min-width: 28px;
+  padding-top: 0.05rem;
+}
+.ref-list a {
+  color: var(--primary);
+  text-decoration: none;
+  word-break: break-all;
+}
+.ref-list a:hover {
+  text-decoration: underline;
+}
+
+.ref-mark {
+  font-size: 0.7rem;
+  vertical-align: super;
+  color: var(--primary);
+  font-family: var(--font-display);
+  margin-left: 1px;
+}

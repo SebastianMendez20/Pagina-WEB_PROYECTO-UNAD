@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime History — Anime Studio</title>
+    <meta
+      name="description"
+      content="Complete timeline of anime history: from the pioneers of 1917 to the global streaming era."
+    />
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Rampart+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/pages/history.css" />
+
+    <!-- Aplicar tema antes del renderizado -->
+    <script>
+      (function () {
+        var t = localStorage.getItem("animeStudioTheme") || "light";
+        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.setAttribute(
+          "data-bs-theme",
+          t === "dark" ? "dark" : "light"
+        );
+      })();
+    </script>
+  </head>
+
+  <body>
+    <!-- ══════════════════════════════════════════
+         NAVBAR
+    ══════════════════════════════════════════ -->
+    <nav class="navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../assets/img/anime-away-face-svgrepo-com.svg"
+            alt="Anime Studio Logo"
+            width="32"
+            height="32"
+          />
+          Anime Studio
+        </a>
+
+        <div class="d-none d-md-flex align-items-center gap-1 mx-auto">
+          <a class="nav-link-custom" href="home.html">Home</a>
+          <a class="nav-link-custom active" href="history.html">History</a>
+          <a class="nav-link-custom" href="genres.html">Genres</a>
+          <a class="nav-link-custom" href="culture.html">Culture</a>
+          <a class="nav-link-custom" href="contact_me.html">Contact</a>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <a
+            href="../index.html"
+            style="
+              font-size: 0.82rem;
+              color: var(--muted);
+              text-decoration: none;
+            "
+            title="Change language"
+          >
+            🇪🇸 <span class="d-none d-sm-inline">ES</span>
+          </a>
+          <label class="theme-toggle" aria-label="Toggle theme">
+            <span class="icon-moon">🌙</span>
+            <input type="checkbox" class="theme-toggle-input" />
+            <span class="theme-toggle-track"></span>
+            <span class="icon-sun">☀️</span>
+          </label>
+          <button
+            class="navbar-toggler d-md-none border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+            aria-label="Abrir menú de navegación"
+            style="color: var(--text)"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+      <div
+        class="offcanvas-header"
+        style="
+          background: var(--surface);
+          border-bottom: 1px solid var(--border);
+        "
+      >
+        <h5
+          class="offcanvas-title"
+          style="font-family: var(--font-display); color: var(--primary)"
+        >
+          Menu
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body" style="background: var(--bg)">
+        <nav class="d-flex flex-column gap-2">
+          <a class="nav-link-custom" href="home.html">🏠 Home</a>
+          <a class="nav-link-custom active" href="history.html">📜 History</a>
+          <a class="nav-link-custom" href="genres.html">🎭 Genres</a>
+          <a class="nav-link-custom" href="culture.html">⛩️ Culture</a>
+          <a class="nav-link-custom" href="contact_me.html">✉️ Contact</a>
+          <hr class="divider" />
+          <a class="nav-link-custom" href="../index.html">🌐 Change language</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         HERO DE PÁGINA
+    ══════════════════════════════════════════ -->
+    <section class="page-hero">
+      <div class="container" style="position: relative; z-index: 1">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb-custom" aria-label="Breadcrumb">
+          <a href="home.html">Home</a>
+          <span class="sep">›</span>
+          <span class="current">History</span>
+        </nav>
+
+        <div class="row align-items-end">
+          <div class="col-lg-8">
+            <p class="page-hero__eyebrow">Timeline</p>
+            <h1 class="page-hero__title">
+              History of<br />
+              <span style="color: var(--primary)">Anime</span>
+            </h1>
+            <p class="page-hero__desc">
+              More than a century of experimentation, crises, and technical
+              revolutions that transformed modest silent short films into one of
+              the most influential cultural phenomena on the planet.
+            </p>
+          </div>
+          <div
+            class="col-lg-4 d-none d-lg-flex justify-content-end align-items-end pb-2"
+          >
+            <!-- Kanji decorativo -->
+            <div
+              style="
+                font-family: var(--font-display);
+                font-size: 5rem;
+                color: var(--primary);
+                opacity: 0.18;
+                line-height: 1;
+                user-select: none;
+              "
+              aria-hidden="true"
+            >
+              歴史
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats rápidas -->
+        <div
+          class="row mt-4 pt-4 border-top g-3"
+          style="border-color: var(--border) !important"
+        >
+          <div class="col-6 col-md-3">
+            <div class="data-highlight">
+              <span class="data-highlight__icon">📅</span>
+              <div>
+                <p class="data-highlight__label">Documented start</p>
+                <p class="data-highlight__value">1917</p>
+                <p class="data-highlight__desc">
+                  First Japanese animated short
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="data-highlight">
+              <span class="data-highlight__icon">📺</span>
+              <div>
+                <p class="data-highlight__label">First TV series</p>
+                <p class="data-highlight__value">1963</p>
+                <p class="data-highlight__desc">Astro Boy by Osamu Tezuka</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="data-highlight">
+              <span class="data-highlight__icon">🌍</span>
+              <div>
+                <p class="data-highlight__label">Global expansion</p>
+                <p class="data-highlight__value">1988–95</p>
+                <p class="data-highlight__desc">Akira, Ghost in the Shell</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="data-highlight">
+              <span class="data-highlight__icon">🎬</span>
+              <div>
+                <p class="data-highlight__label">Oscar for Best Animated</p>
+                <p class="data-highlight__value">2003</p>
+                <p class="data-highlight__desc">
+                  Spirited Away — Studio Ghibli
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CONTENIDO PRINCIPAL — 2 columnas
+    ══════════════════════════════════════════ -->
+    <main class="container my-5">
+      <div class="row g-5">
+        <!-- ── COLUMNA PRINCIPAL ── -->
+        <div class="col-lg-8">
+          <!-- ════════════════════════════════
+               ERA 1: Precursores
+          ════════════════════════════════ -->
+          <section class="era-section" id="era-precursores">
+            <div class="era-header">
+              <div class="era-badge">
+                Before 1917
+                <small>Precursors</small>
+              </div>
+              <div>
+                <h2 class="era-title">Roots: from emakimono to the frame</h2>
+                <p class="era-subtitle">
+                  Japanese narrative art and early Western animations
+                </p>
+              </div>
+            </div>
+
+            <p>
+              To understand anime, one must go back much further than most
+              imagine. The Japanese narrative tradition has a millenary visual
+              history: since the 12th century, <em>emakimono</em> —illustrated
+              scrolls unrolled from right to left— narrated legends and battles
+              as if they were moving panoramas. The puppets of the
+              <em>bunraku</em> theater, the <em>kagee</em> shadow art, and the
+              <em>ukiyo-e</em> prints of the Edo period (1603–1868) are
+              considered visual ancestors of anime characters.<a
+                class="ref-mark"
+                href="#referencias"
+                >[1]</a
+              >
+            </p>
+
+            <p>
+              In the West, the first documented animated film was
+              <em>Humorous Phases of Funny Faces</em> (1906), by American
+              producer James Stuart Blackton. In 1908, French cartoonist Émile
+              Cohl produced <em>Fantasmagorie</em>. These works reached Japanese
+              theaters around 1910, and between 1914 and 1917 about 93 foreign
+              animated films were shown in Japan, with American ones being the
+              most popular.<a class="ref-mark" href="#referencias">[2]</a>
+              Their impact was immediate: Japanese producers began to consider
+              creating their own animation.
+            </p>
+
+            <p>
+              There is also an earlier work of unknown authorship:
+              <em>Katsudō Shashin</em> (活動写真), a fragment of barely 3–4
+              seconds discovered in Kyoto in 2005 and dated between 1907 and
+              1911. Although the <em>Asahi Shimbun</em> warns that calling it
+              "animation" in the contemporary sense may be controversial, it is
+              the oldest known manifestation of moving images produced in
+              Japan.<a class="ref-mark" href="#referencias">[3]</a>
+            </p>
+
+            <!-- Imagen: Emakimono -->
+            <div class="my-4">
+              <img
+                src="../assets/img/history_pages/Emakimono.png"
+                class="img-fluid history-img"
+                alt="Emakimono - medieval Japanese illustrated scroll"
+              />
+            </div>
+          </section>
+          <!-- /era-precursores -->
+
+          <!-- ════════════════════════════════
+               ERA 2: Los pioneros (1917)
+          ════════════════════════════════ -->
+          <section class="era-section" id="era-pioneros">
+            <div class="era-header">
+              <div class="era-badge">
+                1917 – 1945
+                <small>Experimental Era</small>
+              </div>
+              <div>
+                <h2 class="era-title">The three pioneers and the dark age</h2>
+                <p class="era-subtitle">
+                  Birth of the medium, the Great Earthquake, and war propaganda
+                </p>
+              </div>
+            </div>
+
+            <p>
+              The year 1917 marks the formal start of Japanese animation with
+              the coincidence of three creators working independently and
+              without communication with each other. None had documentation on
+              animation techniques, so each experimented on their own, through
+              trial and error.<a class="ref-mark" href="#referencias">[2]</a>
+            </p>
+
+            <div class="row g-3 my-3">
+              <div class="col-md-4">
+                <div class="work-card flex-column align-items-start">
+                  <span class="work-card__year">January 1917</span>
+                  <h4 class="work-card__title mt-2">Ōten Shimokawa</h4>
+                  <p class="work-card__desc">
+                    Created <em>Imokawa Mukuzō Genkanban no Maki</em>,
+                    considered the first publicly released Japanese animated
+                    short. He drew figures on a chalkboard. He made five shorts,
+                    but the visual strain damaged his eyesight and he returned
+                    to manga.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="work-card flex-column align-items-start">
+                  <span class="work-card__year">May 1917</span>
+                  <h4 class="work-card__title mt-2">Seitarō Kitayama</h4>
+                  <p class="work-card__desc">
+                    Produced <em>Saru Kani Gassen</em> (The Battle of the Monkey
+                    and the Crab), based on a Japanese folk tale. He made up to
+                    ten films that year and exported a Momotarō adaptation to
+                    France, the first anime to reach the West.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="work-card flex-column align-items-start">
+                  <span class="work-card__year">June 1917</span>
+                  <h4 class="work-card__title mt-2">Jun'ichi Kōuchi</h4>
+                  <p class="work-card__desc">
+                    Released <em>Namakura Gatana</em> (The Dull Sword), a
+                    4-minute short about a samurai who buys a blunt katana. It
+                    is the oldest surviving work; it was rediscovered in 2008 in
+                    an antique shop in Osaka.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Imagen: Namakura Gatana -->
+            <div class="my-4">
+              <img
+                src="../assets/img/history_pages/Fotograma de Namakura Gatana.jpg"
+                class="img-fluid history-img"
+                alt="Frame from Namakura Gatana (1917)"
+              />
+            </div>
+
+            <h3 style="font-size: 1.2rem; margin-top: 2.5rem">
+              The Great Kantō Earthquake (1923)
+            </h3>
+            <p>
+              The early development of anime suffered a devastating blow when
+              the Great Kantō Earthquake destroyed studios and warehouses in
+              Tokyo. Countless pioneering works were lost forever in the fires,
+              leaving a historical void that film researchers are still trying
+              to fill.<a class="ref-mark" href="#referencias">[1]</a>
+              Kitayama, whose studio was destroyed, moved to Osaka and abandoned
+              animation to dedicate himself to documentaries.
+            </p>
+
+            <h3 style="font-size: 1.2rem; margin-top: 2.5rem">
+              Anime at the service of war (1930–1945)
+            </h3>
+            <p>
+              As Japan entered its militaristic period, the imperial government
+              recognized the power of animation as a propaganda tool. The most
+              significant work of this period was
+              <em>Momotarō: Umi no Shinpei</em> (Momotarō, Sacred Sailors,
+              1945), the first Japanese animated feature film, financed by the
+              Imperial Navy. Ironically, many of the animators who worked on
+              these wartime productions would later build the creative postwar
+              anime industry.<a class="ref-mark" href="#referencias">[4]</a>
+            </p>
+          </section>
+          <!-- /era-pioneros -->
+
+          <!-- ════════════════════════════════
+               ERA 3: Toei y el sueño Disney
+          ════════════════════════════════ -->
+          <section class="era-section" id="era-toei">
+            <div class="era-header">
+              <div class="era-badge">
+                1948 – 1962
+                <small>Toei Dōga Era</small>
+              </div>
+              <div>
+                <h2 class="era-title">
+                  The dream of being the Disney of the East
+                </h2>
+                <p class="era-subtitle">
+                  Toei Animation and the first high-quality feature films
+                </p>
+              </div>
+            </div>
+
+            <p>
+              With Japan rebuilding after the war, the cultural industry took on
+              a vital role. In 1948, Nihon Dōga Eigasha was founded, which in
+              1956 would become <strong>Toei Dōga</strong> (today Toei
+              Animation) with a declared ambition: to become the "Disney of the
+              East". Unlike the television model that would come later, Toei bet
+              on high-budget feature films with fluid and detailed animation.<a
+                class="ref-mark"
+                href="#referencias"
+                >[4]</a
+              >
+            </p>
+
+            <p>
+              In 1958 they released <em>Hakujaden</em> (The Tale of the White
+              Serpent), the first Japanese color animated feature, based on a
+              Chinese legend. The film demonstrated that Japan could produce
+              world-class animation and had an unexpected consequence: a young
+              man named <strong>Hayao Miyazaki</strong> saw it in theaters and
+              was so impressed that he decided to dedicate his life to
+              animation.
+            </p>
+
+            <p>
+              In Toei's hallways, <strong>Isao Takahata</strong> also trained.
+              These two names, who decades later would found Studio Ghibli,
+              learned at Toei the philosophy of "quality over quantity" that
+              would mark their entire careers.
+            </p>
+
+            <!-- Automatic Carousel: Toei Era -->
+            <div id="carouselToei" class="carousel slide history-carousel my-4" data-bs-ride="carousel" data-bs-interval="5000">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselToei" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Hakujaden"></button>
+                <button type="button" data-bs-target="#carouselToei" data-bs-slide-to="1" aria-label="Toei Studios"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../assets/img/history_pages/Hakujaden.jpg" class="d-block w-100" alt="Hakujaden (1958) - Toei's first color animated feature film" />
+                  <div class="carousel-caption">
+                    <p><strong>Hakujaden (1958)</strong> — Toei's first color animated feature film.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../assets/img/history_pages/Estudios Toei Animation.png" class="d-block w-100" alt="Toei Animation Studios in Tokyo" />
+                  <div class="carousel-caption">
+                    <p><strong>Toei Animation Studios</strong> — Tokyo, Japan.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselToei" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselToei" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
+          <!-- /era-toei -->
+
+          <!-- ════════════════════════════════
+               ERA 4: Revolución televisiva
+          ════════════════════════════════ -->
+          <section class="era-section" id="era-tezuka">
+            <div class="era-header">
+              <div class="era-badge">
+                1963 – 1979
+                <small>TV Revolution</small>
+              </div>
+              <div>
+                <h2 class="era-title">
+                  Osamu Tezuka and the birth of television anime
+                </h2>
+                <p class="era-subtitle">
+                  Astro Boy, limited animation, and the rise of Mecha
+                </p>
+              </div>
+            </div>
+
+            <p>
+              Osamu Tezuka (1928–1989), known in Japan as the
+              <strong>"God of Manga"</strong> (漫画の神様), was the artist who
+              transformed anime from a niche cinematic entertainment into a
+              mass‑reach television industry. His influence was so profound that
+              it is impossible to imagine modern anime without him.<a
+                class="ref-mark"
+                href="#referencias"
+                >[5]</a
+              >
+            </p>
+
+            <div class="quote-block">
+              <p>
+                "January 1, 1963, was the inaugural broadcast of
+                <em>Astro Boy</em>. It was the first Japanese TV animated
+                program produced as a series. Weekly 30‑minute animated TV
+                series are commonplace today, and <em>Astro Boy</em> was the
+                first of its kind in the world."
+              </p>
+              <cite
+                >— Osamu Tezuka, quoted in Google Arts &amp; Culture / Tezuka
+                Productions</cite
+              >
+            </div>
+
+            <h3 style="font-size: 1.2rem; margin-top: 2rem">
+              Limited animation: necessity as virtue
+            </h3>
+            <p>
+              To produce 30 minutes of animation per week —unheard of at the
+              time— Tezuka and his team at <em>Mushi Production</em> developed
+              <strong>limited animation</strong>: a technique that reduced the
+              number of frames per second and reused backgrounds and sequences.
+              Instead of fluid movements, they opted for exaggerated facial
+              expressions, dynamic camera movements, and prolonged static shots
+              that conveyed emotion without needing to redraw.<a
+                class="ref-mark"
+                href="#referencias"
+                >[6]</a
+              >
+            </p>
+            <p>
+              What was born from budget constraints became one of the most
+              recognizable traits of anime. The first episode achieved a 27.4%
+              audience share; the historical peak was <strong>40.7%</strong>,
+              recorded on August 29, 1964.<a
+                class="ref-mark"
+                href="#referencias"
+                >[7]</a
+              >
+            </p>
+
+            <!-- Imagen: Osamu Tezuka -->
+            <div class="my-4">
+              <img
+                src="../assets/img/history_pages/Osamu Tezuka en Mushi Production.webp"
+                class="img-fluid history-img"
+                alt="Osamu Tezuka at Mushi Production (c. 1963)"
+              />
+            </div>
+
+            <h3 style="font-size: 1.2rem; margin-top: 2.5rem">
+              Key works of the period (1963–1979)
+            </h3>
+            <div class="d-flex flex-column gap-2 mt-3">
+              <div class="work-card">
+                <span class="work-card__year">1963</span>
+                <div>
+                  <h5 class="work-card__title">Astro Boy (Tetsuwan Atomu)</h5>
+                  <p class="work-card__desc">
+                    First weekly 30‑minute anime series. Combined science
+                    fiction with moral dilemmas about coexistence between humans
+                    and robots. It was exported to the US, China, and European
+                    countries.<a class="ref-mark" href="#referencias">[7]</a>
+                  </p>
+                </div>
+              </div>
+              <div class="work-card">
+                <span class="work-card__year">1963</span>
+                <div>
+                  <h5 class="work-card__title">
+                    Kimba the White Lion (Jungle Taitei)
+                  </h5>
+                  <p class="work-card__desc">
+                    Tezuka's second major series. It was the first TV anime
+                    series broadcast in color in Japan and paved the way for
+                    systematic export to the West.
+                  </p>
+                </div>
+              </div>
+              <div class="work-card">
+                <span class="work-card__year">1972</span>
+                <div>
+                  <h5 class="work-card__title">Mazinger Z</h5>
+                  <p class="work-card__desc">
+                    Created by Go Nagai, it popularized the <em>mecha</em> genre
+                    (giant robots piloted by humans), one of the pillars of
+                    anime that would define decades of production.
+                  </p>
+                </div>
+              </div>
+              <div class="work-card">
+                <span class="work-card__year">1979</span>
+                <div>
+                  <h5 class="work-card__title">Mobile Suit Gundam</h5>
+                  <p class="work-card__desc">
+                    Introduced a more realistic and political approach to the
+                    mecha genre, with morally complex interstellar wars. It
+                    generated an expanded universe that remains active today.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- /era-tezuka -->
+
+          <!-- ════════════════════════════════
+               ERA 5: La Edad de Oro
+          ════════════════════════════════ -->
+          <section class="era-section" id="era-dorada">
+            <div class="era-header">
+              <div class="era-badge">
+                1980 – 1999
+                <small>Golden Age</small>
+              </div>
+              <div>
+                <h2 class="era-title">
+                  The Golden Age: Akira, Ghibli, and global conquest
+                </h2>
+                <p class="era-subtitle">
+                  OVAs, cyberpunk, Dragon Ball, and legitimization as art
+                </p>
+              </div>
+            </div>
+
+            <p>
+              In the 1980s, Japan experienced an unprecedented economic bubble.
+              The surplus of capital spilled over into the cultural industry and
+              allowed a creative freedom that had not existed before. The
+              <strong>OVA</strong> (Original Video Animation) format was born:
+              direct‑to‑VHS releases that bypassed television censorship and the
+              pressure for mass box‑office success. OVAs enabled adult,
+              experimental, violent, and erotic anime that would define a
+              generation of cult following.<a
+                class="ref-mark"
+                href="#referencias"
+                >[4]</a
+              >
+            </p>
+
+            <h3 style="font-size: 1.2rem; margin-top: 2rem">
+              Akira (1988): the introduction to the world
+            </h3>
+            <p>
+              The technical culmination of this era was <em>Akira</em> (1988),
+              by Katsuhiro Otomo, a dystopian science‑fiction film set in
+              Neo‑Tokyo. With an extraordinary budget for the time, it used 327
+              different colors —50 created specifically for the film— and
+              abandoned Tezuka's limited animation to return to total fluidity.
+              It also applied the <em>pre‑scoring</em> technique: actors
+              recorded their voices before animation, and characters synced
+              their lips to the audio, unheard of in Japan until then.<a
+                class="ref-mark"
+                href="#referencias"
+                >[4]</a
+              >
+            </p>
+
+            <!-- Imagen: Akira -->
+            <div class="my-4">
+              <img
+                src="../assets/img/history_pages/Akira.jpg"
+                class="img-fluid history-img"
+                alt="Akira (1988) - Katsuhiro Otomo"
+              />
+            </div>
+
+            <h3 style="font-size: 1.2rem; margin-top: 2.5rem">
+              Studio Ghibli: anime as art cinema
+            </h3>
+            <p>
+              In 1985, Hayao Miyazaki and Isao Takahata founded
+              <strong>Studio Ghibli</strong>, taking the quality philosophy both
+              had learned at Toei to its highest expression. Their films
+              combined exquisite animation with mature narratives about nature,
+              war, childhood, and identity. <em>My Neighbor Totoro</em> (1988)
+              and <em>Grave of the Fireflies</em> (1988) —released the same
+              year— demonstrated that anime could be devastatingly beautiful and
+              emotionally devastating at the same time.<a
+                class="ref-mark"
+                href="#referencias"
+                >[8]</a
+              >
+            </p>
+            <p>
+              The definitive milestone of international legitimization came in
+              2003, when <em>Spirited Away</em> (Sen to Chihiro no Kamikakushi,
+              2001) won the Oscar for Best Animated Feature, becoming the first
+              non‑English‑language film to win that award in that category.
+            </p>
+
+            <!-- Imagen: Studio Ghibli -->
+            <div class="my-4">
+              <img
+                src="../assets/img/history_pages/Studio Ghibli.png"
+                class="img-fluid history-img"
+                alt="Studio Ghibli - Mitaka, Tokyo"
+              />
+            </div>
+
+            <h3 style="font-size: 1.2rem; margin-top: 2.5rem">
+              Global expansion (1986–1999)
+            </h3>
+            <p>
+              While auteur cinema elevated anime, television massified it on a
+              global scale. In 1986, <em>Dragon Ball</em> premiered, adapting
+              Akira Toriyama's manga. Goku's adventures became Japan's most
+              important cultural export. <em>Sailor Moon</em> (1992) did the
+              same for the <em>mahō shōjo</em> genre, bringing magic and
+              friendship to audiences worldwide, especially female ones.<a
+                class="ref-mark"
+                href="#referencias"
+                >[8]</a
+              >
+            </p>
+            <p>
+              In 1995, <em>Ghost in the Shell</em> (Mamoru Oshii) topped
+              Billboard's weekly video sales chart in the United States,
+              becoming a symbol of anime "taken seriously" by the West.<a
+                class="ref-mark"
+                href="#referencias"
+                >[9]</a
+              >
+              That same year, <em>Neon Genesis Evangelion</em> (Hideaki Anno)
+              deconstructed the mecha genre and became a study of psychological
+              trauma that continues to be analyzed academically three decades
+              later.
+            </p>
+
+            <!-- Automatic Carousel: Golden Age -->
+            <div id="carouselDorada" class="carousel slide history-carousel my-4" data-bs-ride="carousel" data-bs-interval="5000">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselDorada" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Dragon Ball"></button>
+                <button type="button" data-bs-target="#carouselDorada" data-bs-slide-to="1" aria-label="Neon Genesis Evangelion"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../assets/img/history_pages/Dragon Ball.jpg" class="d-block w-100" alt="Dragon Ball (1986)" />
+                  <div class="carousel-caption">
+                    <p><strong>Dragon Ball (1986)</strong> — Adaptation of Akira Toriyama's manga.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../assets/img/history_pages/Neon Genesis Evangelion.jpg" class="d-block w-100" alt="Neon Genesis Evangelion (1995)" />
+                  <div class="carousel-caption">
+                    <p><strong>Neon Genesis Evangelion (1995)</strong> — Hideaki Anno deconstructs the mecha genre.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselDorada" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselDorada" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
+          <!-- /era-dorada -->
+
+          <!-- ════════════════════════════════
+               ERA 6: Era Digital
+          ════════════════════════════════ -->
+          <section class="era-section" id="era-digital">
+            <div class="era-header">
+              <div class="era-badge">
+                2000 – Today
+                <small>Digital Era</small>
+              </div>
+              <div>
+                <h2 class="era-title">
+                  The digital age and streaming dominance
+                </h2>
+                <p class="era-subtitle">
+                  CGI, global phenomenon, and the $25 billion industry
+                </p>
+              </div>
+            </div>
+
+            <p>
+              The transition to the 21st century brought the end of physical
+              celluloid. Digital animation software replaced hand‑painted cels,
+              reducing costs and speeding up production. CGI began to be
+              integrated gradually, at first clumsily and then with increasingly
+              refined results. Studios retained the aesthetics of traditional
+              anime while adopting modern tools.
+            </p>
+
+            <p>
+              The arrival of streaming platforms such as Crunchyroll (founded in
+              2006), and later Netflix and Amazon Prime Video, eliminated
+              geographical barriers and distribution delays. The
+              <em>simulcast</em> model —simultaneous broadcast with the original
+              Japanese transmission— allowed fans worldwide to watch new
+              episodes just hours after their premiere for the first time.<a
+                class="ref-mark"
+                href="#referencias"
+                >[8]</a
+              >
+            </p>
+
+            <h3 style="font-size: 1.2rem; margin-top: 2rem">
+              Titles that redefined the industry
+            </h3>
+            <div class="d-flex flex-column gap-2 mt-3">
+              <div class="work-card">
+                <span class="work-card__year">2004</span>
+                <div>
+                  <h5 class="work-card__title">
+                    Fullmetal Alchemist / Brotherhood
+                  </h5>
+                  <p class="work-card__desc">
+                    Combined action, philosophy, and critique of
+                    totalitarianism. Brotherhood (2009) became the highest‑rated
+                    series by the global anime community for years.
+                  </p>
+                </div>
+              </div>
+              <div class="work-card">
+                <span class="work-card__year">2013</span>
+                <div>
+                  <h5 class="work-card__title">
+                    Attack on Titan (Shingeki no Kyojin)
+                  </h5>
+                  <p class="work-card__desc">
+                    Demonstrated that adult‑oriented anime could be a global
+                    viral phenomenon. It broke audience records and sparked
+                    cultural debates in more than 190 countries.
+                  </p>
+                </div>
+              </div>
+              <div class="work-card">
+                <span class="work-card__year">2016</span>
+                <div>
+                  <h5 class="work-card__title">
+                    Demon Slayer (Kimetsu no Yaiba)
+                  </h5>
+                  <p class="work-card__desc">
+                    The film <em>Mugen Train</em> (2020) became the
+                    highest‑grossing film in Japanese history, surpassing even
+                    <em>Spirited Away</em>.
+                  </p>
+                </div>
+              </div>
+              <div class="work-card">
+                <span class="work-card__year">2015</span>
+                <div>
+                  <h5 class="work-card__title">
+                    My Hero Academia (Boku no Hero Academia)
+                  </h5>
+                  <p class="work-card__desc">
+                    Revitalized the superhero shōnen genre and became one of the
+                    most‑watched anime on streaming platforms in Latin America.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Placeholder para imagen de convención (sin imagen disponible) -->
+            <div
+              class="img-placeholder my-4"
+              role="img"
+              aria-label="Reserved space for image"
+            >
+              <span class="img-placeholder__icon">🖼️</span>
+              <p class="img-placeholder__label">
+                Anime Expo or Comiket — Global fandom
+              </p>
+              <p class="img-placeholder__hint">
+                Suggested image: photograph of an international anime convention
+                (Anime Expo, Comiket, etc.) showing the global community —
+                Creative Commons license preferred
+              </p>
+            </div>
+
+            <h3 style="font-size: 1.2rem; margin-top: 2.5rem">
+              Anime today: figures of a global industry
+            </h3>
+            <p>
+              According to 2023 data, the anime industry moves more than
+              <strong>$25 billion USD</strong> annually worldwide, including
+              licensing, merchandising, streaming, and live events. It is the
+              third most‑viewed type of content on streaming platforms globally,
+              with active fandoms in more than 190 countries. Japan currently
+              produces over 200 anime series per year, with more than 700
+              registered animation studios.<a
+                class="ref-mark"
+                href="#referencias"
+                >[8]</a
+              >
+            </p>
+          </section>
+          <!-- /era-digital -->
+
+          <!-- ── Navegación entre páginas ── -->
+          <nav class="page-nav" aria-label="Navigation between sections">
+            <a href="home.html" class="page-nav__item">
+              <span class="page-nav__label">← Previous</span>
+              <span class="page-nav__title">Home</span>
+            </a>
+            <a href="genres.html" class="page-nav__item page-nav__item--next">
+              <span class="page-nav__label">Next →</span>
+              <span class="page-nav__title">Anime Genres</span>
+            </a>
+          </nav>
+
+          <!-- ══════════════════════════════════════
+               REFERENCIAS
+          ══════════════════════════════════════ -->
+          <aside
+            class="references-section"
+            id="referencias"
+            aria-label="Bibliographic references"
+          >
+            <h2>
+              <span style="color: var(--primary)">📚</span>
+              References
+            </h2>
+            <p
+              style="
+                font-size: 0.82rem;
+                color: var(--muted);
+                margin-bottom: 1.5rem;
+              "
+            >
+              The following sources support the content of this page. It is
+              recommended to consult each reference directly for more detail.
+            </p>
+            <ol class="ref-list">
+              <li>
+                Wikipedia (es). <em>Historia del anime</em>. Wikimedia
+                Foundation. Last updated: 2025.
+                <a
+                  href="https://es.wikipedia.org/wiki/Historia_del_anime"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  https://es.wikipedia.org/wiki/Historia_del_anime
+                </a>
+              </li>
+              <li>
+                Infobae / The Conversation.
+                <em>¿Cuál es el primer anime de la historia?</em>
+                Published: August 2022.
+                <a
+                  href="https://theconversation.com/cual-es-el-primer-anime-de-la-historia-186249"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  https://theconversation.com/cual-es-el-primer-anime-de-la-historia-186249
+                </a>
+              </li>
+              <li>
+                Infobae.
+                <em>¿Cuándo comenzó el anime?: una historia en disputa</em>.
+                August 2022.
+                <a
+                  href="https://www.infobae.com/cultura/2022/08/02/cuando-comenzo-el-anime-una-historia-en-disputa/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  https://www.infobae.com/cultura/2022/08/02/cuando-comenzo-el-anime-una-historia-en-disputa/
+                </a>
+              </li>
+              <li>
+                Código Espagueti.
+                <em
+                  >Historia del Anime: La Crónica Definitiva de 1917 a la Era
+                  Digital</em
+                >. January 2026.
+                <a
+                  href="https://codigoespagueti.com/noticias/anime/historia-del-anime-completa-origen-evolucion-1917-actualidad/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  https://codigoespagueti.com/noticias/anime/historia-del-anime-completa-1917-actualidad/
+                </a>
+              </li>
+              <li>
+                Wikipedia (es). <em>Osamu Tezuka</em>. Wikimedia Foundation.
+                2025.
+                <a
+                  href="https://es.wikipedia.org/wiki/Osamu_Tezuka"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  https://es.wikipedia.org/wiki/Osamu_Tezuka
+                </a>
+              </li>
+              <li>
+                Imperio Anime.
+                <em>Orígenes del anime: de Osamu Tezuka a la era moderna</em>.
+                January 2025.
+                <a
+                  href="https://www.imperioanime.com/articulos/origenes-del-anime-de-osamu-tezuka-a-la-era-moderna/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  https://www.imperioanime.com/articulos/origenes-del-anime-de-osamu-tezuka-a-la-era-moderna/
+                </a>
+              </li>
+              <li>
+                Google Arts &amp; Culture / Tezuka Productions.
+                <em>Osamu Tezuka y el inicio de la animación en TV</em>.
+                <a
+                  href="https://artsandculture.google.com/story/dgWBBNM8pRsA8A?hl=es"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  https://artsandculture.google.com/story/dgWBBNM8pRsA8A
+                </a>
+              </li>
+              <li>
+                El Momento MX.
+                <em
+                  >La Evolución del Anime: De la Animación Limitada al Fenómeno
+                  Global</em
+                >. October 2025.
+                <a
+                  href="https://elmomento.mx/2025/10/11/la-evolucion-del-anime-de-la-animacion-limitada-de-tezuka-al-fenomeno-global-de-la-cultura-pop-2025/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  https://elmomento.mx/2025/10/11/la-evolucion-del-anime-fenomeno-global/
+                </a>
+              </li>
+              <li>
+                Google Arts &amp; Culture / Ministry of Economy, Trade and
+                Industry Japan.
+                <em>Manga y Anime</em>.
+                <a
+                  href="https://artsandculture.google.com/story/manga-y-anime-ministry-of-economy-trade-and-industry-meti/0QXxgxls0jJ5Kg?hl=es"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  https://artsandculture.google.com/story/manga-y-anime
+                </a>
+              </li>
+            </ol>
+          </aside>
+        </div>
+        <!-- /col-lg-8 -->
+
+        <!-- ── COLUMNA LATERAL: Tabla de contenidos ── -->
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="toc" role="navigation" aria-label="Table of contents">
+            <p class="toc__title">📖 Contents</p>
+            <ul class="toc__list">
+              <li>
+                <a href="#era-precursores">
+                  Roots of narrative art
+                  <span class="toc-era">Before 1917</span>
+                </a>
+              </li>
+              <li>
+                <a href="#era-pioneros">
+                  The three pioneers and the dark age
+                  <span class="toc-era">1917–1945</span>
+                </a>
+              </li>
+              <li>
+                <a href="#era-toei">
+                  The dream of being the Disney of the East
+                  <span class="toc-era">1948–1962</span>
+                </a>
+              </li>
+              <li>
+                <a href="#era-tezuka">
+                  Tezuka and television anime
+                  <span class="toc-era">1963–1979</span>
+                </a>
+              </li>
+              <li>
+                <a href="#era-dorada">
+                  The Golden Age
+                  <span class="toc-era">1980–1999</span>
+                </a>
+              </li>
+              <li>
+                <a href="#era-digital">
+                  The digital age and streaming
+                  <span class="toc-era">2000–Today</span>
+                </a>
+              </li>
+              <li>
+                <a href="#referencias"> Bibliographic references </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Dato curiosos lateral -->
+          <div
+            class="mt-4"
+            style="
+              background: var(--surface);
+              border: 1.5px solid var(--border);
+              border-radius: var(--radius-md);
+              padding: 1.5rem;
+            "
+          >
+            <p
+              style="
+                font-family: var(--font-display);
+                font-size: 0.95rem;
+                color: var(--primary);
+                margin-bottom: 1rem;
+              "
+            >
+              💡 Did you know…?
+            </p>
+            <ul
+              style="
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+              "
+            >
+              <li
+                style="
+                  font-size: 0.83rem;
+                  color: var(--muted);
+                  line-height: 1.6;
+                  padding-bottom: 1rem;
+                  border-bottom: 1px solid var(--border);
+                "
+              >
+                <em>Namakura Gatana</em> (1917), the oldest surviving anime
+                short, was rediscovered in 2008 in an antique shop in Osaka.
+              </li>
+              <li
+                style="
+                  font-size: 0.83rem;
+                  color: var(--muted);
+                  line-height: 1.6;
+                  padding-bottom: 1rem;
+                  border-bottom: 1px solid var(--border);
+                "
+              >
+                <em>Akira</em> (1988) used 327 different colors, of which 50
+                were created specifically for the film.
+              </li>
+              <li
+                style="
+                  font-size: 0.83rem;
+                  color: var(--muted);
+                  line-height: 1.6;
+                  padding-bottom: 1rem;
+                  border-bottom: 1px solid var(--border);
+                "
+              >
+                Tezuka was invited in 1965 by Stanley Kubrick to be art director
+                for <em>2001: A Space Odyssey</em>, but he declined the offer.
+              </li>
+              <li
+                style="
+                  font-size: 0.83rem;
+                  color: var(--muted);
+                  line-height: 1.6;
+                "
+              >
+                <em>Spirited Away</em> (2001) was the first non‑English‑language
+                film to win the Oscar for Best Animated Feature.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Enlace a géneros -->
+          <div
+            class="mt-4 text-center"
+            style="
+              background: color-mix(in srgb, var(--primary) 8%, var(--surface));
+              border: 1.5px solid var(--border);
+              border-radius: var(--radius-md);
+              padding: 1.5rem;
+            "
+          >
+            <div style="font-size: 2rem; margin-bottom: 0.5rem">🎭</div>
+            <p
+              style="
+                font-family: var(--font-display);
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+              "
+            >
+              Continue exploring
+            </p>
+            <p
+              style="
+                font-size: 0.82rem;
+                color: var(--muted);
+                margin-bottom: 1rem;
+                line-height: 1.6;
+              "
+            >
+              Discover the genres that emerged from this history
+            </p>
+            <a
+              href="genres.html"
+              class="btn-primary-custom"
+              style="width: 100%; justify-content: center"
+            >
+              View Genres →
+            </a>
+          </div>
+        </div>
+        <!-- /col-lg-4 -->
+      </div>
+      <!-- /row -->
+    </main>
+
+    <!-- ══════════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-md-4">
+            <span
+              style="
+                font-family: var(--font-display);
+                color: var(--primary);
+                font-size: 1.3rem;
+              "
+              >Anime Studio</span
+            >
+            <p class="mt-1 mb-0" style="font-size: 0.8rem">
+              A cultural exploration project.
+            </p>
+          </div>
+          <div class="col-md-4 text-md-center">
+            <nav class="d-flex flex-wrap gap-3 justify-content-md-center">
+              <a href="history.html">History</a>
+              <a href="genres.html">Genres</a>
+              <a href="culture.html">Culture</a>
+              <a href="contact_me.html">Contact</a>
+            </nav>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a
+              href="../index.html"
+              style="font-size: 0.8rem; color: var(--muted)"
+              >🌐 Change language</a
+            >
+          </div>
+        </div>
+        <hr class="divider mt-3" />
+        <p class="text-center mb-0" style="font-size: 0.75rem">
+          Made with ❤️ and a lot of 規律 &mdash; Anime Studio &copy; 2026
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      if (typeof bootstrap === "undefined") {
+        var s = document.createElement("script");
+        s.src = "../assets/js/bootstrap.bundle.min.js";
+        document.body.appendChild(s);
+      }
+    </script>
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Resaltar enlace activo en la tabla de contenidos -->
+    <script>
+      (function () {
+        var sections = document.querySelectorAll(".era-section, #referencias");
+        var tocLinks = document.querySelectorAll(".toc__list a");
+
+        function onScroll() {
+          var scrollY = window.scrollY + 120;
+          var current = "";
+          sections.forEach(function (s) {
+            if (s.offsetTop <= scrollY) current = s.id;
+          });
+          tocLinks.forEach(function (link) {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === "#" + current) {
+              link.classList.add("active");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+      })();
+    </script>
+
+    <!-- Pétalos flotantes -->
+    <script>
+      (function () {
+        for (var i = 0; i < 6; i++) {
+          var p = document.createElement("div");
+          p.className = "petal";
+          p.style.left = Math.random() * 100 + "vw";
+          p.style.animationDuration = 9 + Math.random() * 10 + "s";
+          p.style.animationDelay = Math.random() * 15 + "s";
+          p.style.width = p.style.height = 8 + Math.random() * 9 + "px";
+          document.body.appendChild(p);
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Studio — Selecciona tu idioma</title>
+    <meta
+      name="description"
+      content="Explora el mundo del anime y la cultura japonesa."
+    />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Rampart+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Aplicar tema antes del renderizado (evita FOUC) -->
+    <script>
+      (function () {
+        var t = localStorage.getItem("animeStudioTheme") || "light";
+        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.setAttribute(
+          "data-bs-theme",
+          t === "dark" ? "dark" : "light"
+        );
+      })();
+    </script>
+  </head>
+
+  <body>
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="assets/img/anime-away-face-svgrepo-com.svg"
+            alt="Logo Anime Studio"
+            width="32"
+            height="32"
+            class="d-inline-block"
+          />
+          Anime Studio
+        </a>
+
+        <!-- Theme toggle -->
+        <label class="theme-toggle" aria-label="Cambiar tema">
+          <span class="icon-moon">🌙</span>
+          <input type="checkbox" class="theme-toggle-input" />
+          <span class="theme-toggle-track"></span>
+          <span class="icon-sun">☀️</span>
+          <span class="theme-toggle-label d-none d-sm-inline">Tema</span>
+        </label>
+      </div>
+    </nav>
+
+    <!-- ── HERO SELECTOR DE IDIOMA ── -->
+    <main>
+      <section class="lang-hero">
+        <!-- Kanji decorativo de fondo -->
+        <div class="lang-hero__deco" aria-hidden="true">言語</div>
+
+        <!-- Encabezado -->
+        <div class="text-center mb-2" style="position: relative; z-index: 1">
+          <p
+            class="lang-hero__subtitle mb-1"
+            style="
+              font-size: 0.8rem;
+              letter-spacing: 3px;
+              text-transform: uppercase;
+            "
+          >
+            アニメスタジオへようこそ
+          </p>
+          <h1 class="lang-hero__title">Anime Studio</h1>
+          <p class="lang-hero__subtitle">
+            Selecciona tu idioma para comenzar la experiencia
+          </p>
+        </div>
+
+        <!-- Tarjetas de idioma -->
+        <div
+          class="lang-cards"
+          role="navigation"
+          aria-label="Selector de idioma"
+        >
+          <!-- Español -->
+          <a
+            href="lang_es/home.html"
+            class="lang-card"
+            aria-label="Continuar en español"
+          >
+            <span
+              class="lang-card__flag"
+              role="img"
+              aria-label="Bandera de España"
+              >ES</span
+            >
+            <span class="lang-card__name">Español</span>
+            <span class="lang-card__native">Spanish</span>
+            <span class="lang-card__badge">✓ Disponible</span>
+          </a>
+
+          <!-- English -->
+          <a
+            href="lang_en/home.html"
+            class="lang-card"
+            aria-label="Continue in English"
+          >
+            <span
+              class="lang-card__flag"
+              role="img"
+              aria-label="Union Jack flag"
+              >EN</span
+            >
+            <span class="lang-card__name">English</span>
+            <span class="lang-card__native">Inglés</span>
+            <span class="lang-card__badge">✓ Disponible</span
+            >
+          </a>
+
+          <!-- 日本語 -->
+          <a
+            href="lang_jp/home.html"
+            class="lang-card"
+            aria-label="日本語で続ける"
+          >
+            <span
+              class="lang-card__flag"
+              role="img"
+              aria-label="Bandera de Japón"
+              >JP</span
+            >
+            <span class="lang-card__name">日本語</span>
+            <span class="lang-card__native">Japonés</span>
+            <span class="lang-card__badge">✓ Disponible</span>
+          </a>
+        </div>
+
+        <!-- Nota idiomas -->
+        <p
+          class="mt-4 text-center"
+          style="
+            font-size: 0.8rem;
+            color: var(--muted);
+            position: relative;
+            z-index: 1;
+          "
+        >
+          Los idiomas deshabilitados estarán disponibles próximamente.
+        </p>
+      </section>
+    </main>
+
+    <!-- ── FOOTER mínimo ── -->
+    <footer class="site-footer text-center">
+      <div class="container">
+        <p class="mb-1">
+          <span style="font-family: var(--font-display); color: var(--primary)"
+            >Anime Studio</span
+          >
+          &mdash; Un proyecto de exploración cultural
+        </p>
+        <p class="mb-0" style="font-size: 0.75rem">
+          Hecho con ❤️ y muchísima 規律
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Fallback JS local -->
+    <script>
+      if (typeof bootstrap === "undefined") {
+        var s = document.createElement("script");
+        s.src = "assets/js/bootstrap.bundle.min.js";
+        document.body.appendChild(s);
+      }
+    </script>
+
+    <!-- JS propio -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Pétalos flotantes (efecto decorativo) -->
+    <script>
+      (function createPetals() {
+        for (var i = 0; i < 10; i++) {
+          var p = document.createElement("div");
+          p.className = "petal";
+          p.style.left = Math.random() * 100 + "vw";
+          p.style.animationDuration = 8 + Math.random() * 10 + "s";
+          p.style.animationDelay = Math.random() * 12 + "s";
+          p.style.width = p.style.height = 8 + Math.random() * 10 + "px";
+          document.body.appendChild(p);
+        }
+      })();
+    </script>
+  </body>
+</html>
